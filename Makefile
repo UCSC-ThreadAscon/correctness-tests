@@ -63,7 +63,7 @@ ascon_permutations.o: $(HEADERS) ascon_permutations.c
 	$(CC) $(CFLAGS) -c ascon_permutations.c
 
 clean:
-	rm -r -f $(wildcard *.o) $(BINARIES)
+	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128
 
 check-decrypt:
 	leaks --atExit -- ./decrypt-mac-ascon128
