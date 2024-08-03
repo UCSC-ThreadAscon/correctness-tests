@@ -57,7 +57,7 @@ clean:
 	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128
 	cd libascon && $(MAKE) clean
 
-check-decrypt:
+check:
 	leaks --atExit -- ./decrypt-mac-ascon128
 	leaks --atExit -- ./decrypt-mac-ascon128a
 	leaks --atExit -- ./decrypt-mle-ascon128a
