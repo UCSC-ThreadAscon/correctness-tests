@@ -13,7 +13,7 @@
 #include "libascon/common.h"
 
 /**
- * From the file "ascon128a-mac-decrypt-test.txt".
+ * From the file "ascon128a-mac-decrypt-test1.txt".
 */
 void test1(void) {
   uint8_t key[] = {0x30, 0xB9, 0x7A, 0x04, 0xA0, 0x2B, 0x0E, 0xA0,
