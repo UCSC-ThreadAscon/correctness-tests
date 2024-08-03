@@ -1,7 +1,13 @@
 CC = clang 
 CFLAGS = -Wall -Werror -Wextra -Wpedantic
 HEADERS = ascon.h ascon_internal.h
-OBJECTS = ascon_permutations.o ascon_hash.o ascon_buffering.o ascon_aead128a.o ascon_aead128.o ascon_aead80pq.o ascon_aead_common.o
+OBJECTS = ascon_permutations.o \
+					ascon_hash.o				 \
+					ascon_buffering.o 	 \
+					ascon_aead128a.o 		 \
+					ascon_aead128.o 		 \
+					ascon_aead80pq.o 		 \
+					ascon_aead_common.o
 
 all: $(OBJECTS)
 

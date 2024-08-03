@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "ascon.h"
+#include "libascon/ascon.h"
 
 int main(void)
 {

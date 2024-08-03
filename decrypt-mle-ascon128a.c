@@ -9,8 +9,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "ascon.h"
-#include "common.h"
+#include "libascon/ascon.h"
+#include "libascon/common.h"
 
 /**
  * From the file "ascon128a-mle-decrypt-test.txt".

@@ -1,7 +1,14 @@
 CC = clang 
 CFLAGS = -Wall -Werror -Wextra -Wpedantic
-HEADERS = ascon.h ascon_internal.h
-OBJECTS = ascon_permutations.o ascon_hash.o ascon_buffering.o ascon_aead128a.o ascon_aead128.o ascon_aead80pq.o ascon_aead_common.o
+HEADERS = ./libascon/ascon.h 							\
+					./libascon/ascon_internal.h
+OBJECTS = ./libascon/ascon_permutations.o \
+					./libascon/ascon_hash.o 				\
+					./libascon/ascon_buffering.o 		\
+					./libascon/ascon_aead128a.o 		\
+					./libascon/ascon_aead128.o 			\
+					./libascon/ascon_aead80pq.o 		\
+					./libascon/ascon_aead_common.o
 BINARIES = example test-encrypt decrypt-mac-ascon128
 
 .PHONY: libascon
@@ -52,3 +59,6 @@ clean:
 
 check-decrypt:
 	leaks --atExit -- ./decrypt-mac-ascon128
+	leaks --atExit -- ./decrypt-mac-ascon128a
+	leaks --atExit -- ./decrypt-mle-ascon128a
+	leaks --atExit -- ./decrypt-mle-ascon128
