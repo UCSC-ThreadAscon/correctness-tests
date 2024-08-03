@@ -52,11 +52,11 @@ void test1(void)
                                        sizeof(tag));
   if (status == ASCON_TAG_OK)
   {
-    printf("Test 1 ASCON MLE decryption success!\n");
+    printf("Test 1 ASCON-128a MLE decryption success!\n");
   }
   else
   {
-    printf("Test 1 ASCON MLE decryption failure.\n");
+    printf("Test 1 ASCON-128a MLE decryption failure.\n");
   }
   return;
 }
@@ -84,11 +84,43 @@ void test2Ftd1(void)
                                        sizeof(tag));
   if (status == ASCON_TAG_OK)
   {
-    printf("Test 2 ASCON FTD MLE decryption success!\n");
+    printf("Test 2 ASCON-128a FTD MLE decryption success!\n");
   }
   else
   {
-    printf("Test 2 ASCON FTD MLE decryption failure.\n");
+    printf("Test 2 ASCON-128a FTD MLE decryption failure.\n");
+  }
+  return;
+}
+
+void test2Br1(void)
+{
+  uint8_t key[] = {0x53, 0xC4, 0xE0, 0x19, 0x16, 0xAC, 0xA4, 0xC4,
+                   0x5F, 0xD5, 0xCF, 0xFD, 0x76, 0x70, 0x15, 0x53};
+
+  uint8_t nonce[] = {0xE2, 0x4D, 0x0F, 0x6A, 0xD9, 0x1F, 0xFB, 0x06,
+                     0x60, 0xDB, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00};
+
+  uint8_t assocData[] = {0xE2, 0x4D, 0x0F, 0x6A, 0xD9, 0x1F, 0xFB, 0x06,
+                         0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01};
+
+  uint8_t tag[] = {0x7F, 0x33, 0x7D, 0x12};
+
+  uint8_t payload[] = {0xD5, 0x2E, 0x6A, 0x4C, 0x5D, 0x08, 0x97, 0xD5,
+                       0xFA, 0xA6, 0x79, 0x59, 0x0C, 0x01, 0x2C, 0x50,
+                       0x73, 0x86, 0x2E, 0x07, 0xC5, 0x9C, 0xAB, 0x5F,
+                       0xE6, 0xF4, 0xCB, 0x80};
+
+  bool status = ascon_aead128a_decrypt(payload, key, nonce, assocData, payload,
+                                       tag, CRYPTO_ABYTES, sizeof(payload),
+                                       sizeof(tag));
+  if (status == ASCON_TAG_OK)
+  {
+    printf("Test 3 ASCON-128a Border Router MLE decryption success!\n");
+  }
+  else
+  {
+    printf("Test 3 ASCON-128a Border Router MLE decryption failure.\n");
   }
   return;
 }
@@ -96,5 +128,6 @@ void test2Ftd1(void)
 int main(void) {
   test1();
   test2Ftd1();
+  test2Br1();
   return 0;
 }
