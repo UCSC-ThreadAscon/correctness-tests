@@ -13,9 +13,10 @@
 #include "libascon/common.h"
 
 /**
- * From the file "ascon128a-mle-decrypt-test.txt".
+ * From the file "ascon128a-mle-decrypt-test1.txt".
 */
-void test1(void) {
+void test1(void)
+{
   uint8_t key[] = {0x89, 0x0F, 0xF9, 0x74, 0x40, 0xEC, 0xF9, 0x66,
                    0x95, 0x87, 0x38, 0xE2, 0x15, 0x28, 0x03, 0x0B};
 
