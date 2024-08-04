@@ -122,11 +122,11 @@ void test2Br1(void)
                                        sizeof(tag));
   if (status == ASCON_TAG_OK)
   {
-    printf("Test 3 ASCON-128a Border Router MLE decryption success!\n");
+    printf("Test 2 ASCON-128a Border Router MLE decryption success!\n");
   }
   else
   {
-    printf("Test 3 ASCON-128a Border Router MLE decryption failure.\n");
+    printf("Test 2 ASCON-128a Border Router MLE decryption failure.\n");
   }
   return;
 }
