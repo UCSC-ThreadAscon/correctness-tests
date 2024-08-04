@@ -13,7 +13,7 @@
 #include "libascon/common.h"
 
 /**
- * From the file "ascon128-mle-decrypt-test.txt".
+ * From the file "ascon128-mle-decrypt-test1.txt".
 */
 void test1(void) {
   uint8_t key[] = {0x89, 0x0F, 0xF9, 0x74, 0x40, 0xEC, 0xF9, 0x66,
@@ -46,6 +46,10 @@ void test1(void) {
     printf("Test 1 ASCON decryption failure.\n");
   }
 }
+
+/**
+ * From the file "ascon128-mle-decrypt-test.txt".
+*/
 
 int main(void) {
   test1();
