@@ -15,7 +15,8 @@
 /**
  * From the file "ascon128-mle-decrypt-test1.txt".
 */
-void test1(void) {
+void test1(void)
+{
   uint8_t key[] = {0x89, 0x0F, 0xF9, 0x74, 0x40, 0xEC, 0xF9, 0x66,
                    0x95, 0x87, 0x38, 0xE2, 0x15, 0x28, 0x03, 0x0B};
 
@@ -40,18 +41,49 @@ void test1(void) {
                                       tag, CRYPTO_ABYTES, sizeof(payload),
                                       sizeof(tag));
   if (status == ASCON_TAG_OK) {
-    printf("Test 1 ASCON decryption success!\n");
+    printf("Test 1 ASCON-128 MLE decryption success!\n");
   }
   else {
-    printf("Test 1 ASCON decryption failure.\n");
+    printf("Test 1 ASCON-128 MLE decryption failure.\n");
   }
+  return;
 }
 
 /**
  * From the file "ascon128-mle-decrypt-test.txt".
 */
+void test2Ftd1(void)
+{
+  uint8_t key[] = {0x53, 0xC4, 0xE0, 0x19, 0x16, 0xAC, 0xA4, 0xC4,
+                   0x5F, 0xD5, 0xCF, 0xFD, 0x76, 0x70, 0x15, 0x53};
+
+  uint8_t nonce[] = {0x42, 0xD5, 0x52, 0x2A, 0x5D, 0xBD, 0xBE, 0x8F,
+                     0xC7, 0xA8, 0x17, 0x00, 0x00, 0x00, 0x00, 0x00};
+
+  uint8_t assocData[] = {0x42, 0xD5, 0x52, 0x2A, 0x5D, 0xBD, 0xBE, 0x8F,
+                         0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01};
+
+  uint8_t tag[] = {0xD6, 0x8E, 0x55, 0xCD};
+
+  uint8_t payload[] = {0x46, 0x38, 0x18, 0x92, 0x7B, 0x67, 0x9E, 0x56,
+                       0xDD, 0xC1, 0xDD, 0x74, 0xD4, 0xDE, 0x18, 0xFC,
+                       0x70, 0xAC, 0x3A, 0x6D, 0x98, 0x69, 0xA8, 0x64,
+                       0xE6, 0x8E, 0xF4, 0xD2};
+
+  bool status = ascon_aead128_decrypt(payload, key, nonce, assocData, payload,
+                                      tag, CRYPTO_ABYTES, sizeof(payload),
+                                      sizeof(tag));
+  if (status == ASCON_TAG_OK) {
+    printf("Test 2 ASCON-128 FTD MLE decryption success!\n");
+  }
+  else {
+    printf("Test 2 ASCON-128 FTD MLE decryption failure.\n");
+  }
+  return;
+}
 
 int main(void) {
   test1();
+  test2Ftd1();
   return 0;
 }
