@@ -61,6 +61,9 @@ void test1(void)
   return;
 }
 
+/**
+ * From the file "ascon128a-mle-decrypt-test2-ftd.txt".
+ */
 void test2Ftd1(void)
 {
   uint8_t key[] = {0x53, 0xC4, 0xE0, 0x19, 0x16, 0xAC, 0xA4, 0xC4,
@@ -93,6 +96,9 @@ void test2Ftd1(void)
   return;
 }
 
+/**
+ * From the file "ascon128a-mle-decrypt-test2-br.txt".
+ */
 void test2Br1(void)
 {
   uint8_t key[] = {0x53, 0xC4, 0xE0, 0x19, 0x16, 0xAC, 0xA4, 0xC4,
