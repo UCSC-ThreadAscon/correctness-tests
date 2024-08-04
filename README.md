@@ -3,7 +3,9 @@
 This repository contains tests which proves that my forks of
 [ESP-IDF](https://github.com/UCSC-ThreadAscon/esp-idf) and
 [OpenThread](https://github.com/UCSC-ThreadAscon/openthread) are able 
-to successfully communicate using both ASCON-128a and ASCON-128.
+to successfully communicate using the
+[LibAscon](https://github.com/TheMatjaz/LibAscon) implementations
+of both ASCON-128a and ASCON-128.
 
 ## Build Instructions
 
