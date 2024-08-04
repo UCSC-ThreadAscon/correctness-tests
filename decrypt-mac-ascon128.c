@@ -48,10 +48,10 @@ void test1(void)
                                       tag, CRYPTO_ABYTES, sizeof(payload),
                                       sizeof(tag));
   if (status == ASCON_TAG_OK) {
-    printf("Test 1 ASCON decryption success!\n");
+    printf("Test 1 ASCON-128 MAC decryption success!\n");
   }
   else {
-    printf("Test 1 ASCON decryption failure.\n");
+    printf("Test 1 ASCON-128 MAC decryption failure.\n");
   }
 }
 
@@ -81,15 +81,52 @@ void test2(void)
                                       tag, CRYPTO_ABYTES, sizeof(payload),
                                       sizeof(tag));
   if (status == ASCON_TAG_OK) {
-    printf("Test 2 ASCON decryption success!\n");
+    printf("Test 2 ASCON-128 MAC decryption success!\n");
   }
   else {
-    printf("Test 2 ASCON decryption failure.\n");
+    printf("Test 2 ASCON-128 MAC decryption failure.\n");
   }
+  return;
+}
+
+/**
+ * From the file "ascon128-mac-decrypt-test3-ftd.txt".
+ */
+void test3Ftd1(void)
+{
+  uint8_t key[] = {0x41, 0x70, 0xFD, 0x63, 0x2B, 0xBD, 0xF0, 0x24,
+                   0x03, 0xFB, 0xE8, 0x6F, 0xB9, 0x76, 0x0B, 0xB8};
+
+  uint8_t nonce[] = {0x89, 0x01, 0x00, 0x23, 0xC5, 0xB3, 0x00, 0x00,
+                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+
+  uint8_t assocData[] = {0x00, 0x7C, 0x00, 0x90, 0x00, 0x00, 0x00, 0x00,
+                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+
+  uint8_t tag[] = {0xBD, 0x63, 0x67, 0x8F};
+
+  uint8_t payload[] = {0xA9, 0x94, 0xE4, 0x08, 0xEE, 0x17, 0x7A, 0x71,
+                       0xE6, 0xD0, 0xD8, 0xC3, 0x6C, 0x7B, 0x6A, 0x2C,
+                       0x51, 0x81, 0x22, 0xCE, 0xDC, 0xA9, 0x38, 0x8C,
+                       0x28, 0x35, 0x51, 0x0D, 0x45};
+
+  bool status = ascon_aead128_decrypt(payload, key, nonce, assocData, payload,
+                                      tag, CRYPTO_ABYTES, sizeof(payload),
+                                      sizeof(tag));
+  if (status == ASCON_TAG_OK)
+  {
+    printf("Test 3 ASCON-128 FTD MAC decryption success!\n");
+  }
+  else
+  {
+    printf("Test 3 ASCON-128 FTD MAC decryption failure.\n");
+  }
+  return;
 }
 
 int main(void) {
   test1();
   test2();
+  test3Ftd1();
   return 0;
 }
