@@ -107,10 +107,10 @@ void test3Br1(void)
                                        sizeof(tag));
   if (status == ASCON_TAG_OK)
   {
-    printf("Test 3 Border Router ASCON-128a MAC decryption success!\n");
+    printf("Test 2 Border Router ASCON-128a MAC decryption success!\n");
   }
   else {
-    printf("Test 3 Border Router ASCON-128a MAC decryption failure.\n");
+    printf("Test 2 Border Router ASCON-128a MAC decryption failure.\n");
   }
   return;
 }
