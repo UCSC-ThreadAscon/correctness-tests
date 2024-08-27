@@ -1,2 +1,0 @@
-#define CRYPTO_ABYTES 16
-#define OT_NETWORK_KEY_SIZE 16
