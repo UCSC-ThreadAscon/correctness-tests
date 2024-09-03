@@ -1,0 +1,1329 @@
+❯ flash /dev/cu.usbserial-12320
+Executing action: all (aliases: build)
+Running ninja in directory /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build
+Executing "ninja all"...
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32h2
+-- Project sdkconfig file /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/sdkconfig
+Loading defaults file /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/sdkconfig.defaults...
+-- Adding linker script /Users/simeon/esp/esp-idf/components/riscv/ld/rom.api.ld
+-- App "ot_sleepy_device" version: 152117d-dirty
+-- Adding linker script /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.api.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.libgcc.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.wdt.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.systimer.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.version.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.newlib.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.heap.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/soc/esp32h2/ld/esp32h2.peripherals.ld
+---------------------------------------------------------------------------------
+
+OpenThread is using the LibAscon implementation of ASCON-128.
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Hex Dump is enabled for MAC Layer DECRYPTION.
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+The build is for a Thread Device running only 802.15.4: FTD, MTD, SED, or SSED.
+
+---------------------------------------------------------------------------------
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table protobuf-c protocomm pthread riscv rt sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant
+-- Component paths: /Users/simeon/esp/esp-idf/components/app_trace /Users/simeon/esp/esp-idf/components/app_update /Users/simeon/esp/esp-idf/components/bootloader /Users/simeon/esp/esp-idf/components/bootloader_support /Users/simeon/esp/esp-idf/components/bt /Users/simeon/esp/esp-idf/components/cmock /Users/simeon/esp/esp-idf/components/console /Users/simeon/esp/esp-idf/components/cxx /Users/simeon/esp/esp-idf/components/driver /Users/simeon/esp/esp-idf/components/efuse /Users/simeon/esp/esp-idf/components/esp-tls /Users/simeon/esp/esp-idf/components/esp_adc /Users/simeon/esp/esp-idf/components/esp_app_format /Users/simeon/esp/esp-idf/components/esp_bootloader_format /Users/simeon/esp/esp-idf/components/esp_coex /Users/simeon/esp/esp-idf/components/esp_common /Users/simeon/esp/esp-idf/components/esp_driver_ana_cmpr /Users/simeon/esp/esp-idf/components/esp_driver_cam /Users/simeon/esp/esp-idf/components/esp_driver_dac /Users/simeon/esp/esp-idf/components/esp_driver_gpio /Users/simeon/esp/esp-idf/components/esp_driver_gptimer /Users/simeon/esp/esp-idf/components/esp_driver_i2c /Users/simeon/esp/esp-idf/components/esp_driver_i2s /Users/simeon/esp/esp-idf/components/esp_driver_isp /Users/simeon/esp/esp-idf/components/esp_driver_jpeg /Users/simeon/esp/esp-idf/components/esp_driver_ledc /Users/simeon/esp/esp-idf/components/esp_driver_mcpwm /Users/simeon/esp/esp-idf/components/esp_driver_parlio /Users/simeon/esp/esp-idf/components/esp_driver_pcnt /Users/simeon/esp/esp-idf/components/esp_driver_ppa /Users/simeon/esp/esp-idf/components/esp_driver_rmt /Users/simeon/esp/esp-idf/components/esp_driver_sdio /Users/simeon/esp/esp-idf/components/esp_driver_sdm /Users/simeon/esp/esp-idf/components/esp_driver_sdmmc /Users/simeon/esp/esp-idf/components/esp_driver_sdspi /Users/simeon/esp/esp-idf/components/esp_driver_spi /Users/simeon/esp/esp-idf/components/esp_driver_touch_sens /Users/simeon/esp/esp-idf/components/esp_driver_tsens /Users/simeon/esp/esp-idf/components/esp_driver_uart /Users/simeon/esp/esp-idf/components/esp_driver_usb_serial_jtag /Users/simeon/esp/esp-idf/components/esp_eth /Users/simeon/esp/esp-idf/components/esp_event /Users/simeon/esp/esp-idf/components/esp_gdbstub /Users/simeon/esp/esp-idf/components/esp_hid /Users/simeon/esp/esp-idf/components/esp_http_client /Users/simeon/esp/esp-idf/components/esp_http_server /Users/simeon/esp/esp-idf/components/esp_https_ota /Users/simeon/esp/esp-idf/components/esp_https_server /Users/simeon/esp/esp-idf/components/esp_hw_support /Users/simeon/esp/esp-idf/components/esp_lcd /Users/simeon/esp/esp-idf/components/esp_local_ctrl /Users/simeon/esp/esp-idf/components/esp_mm /Users/simeon/esp/esp-idf/components/esp_netif /Users/simeon/esp/esp-idf/components/esp_netif_stack /Users/simeon/esp/esp-idf/components/esp_partition /Users/simeon/esp/esp-idf/components/esp_phy /Users/simeon/esp/esp-idf/components/esp_pm /Users/simeon/esp/esp-idf/components/esp_psram /Users/simeon/esp/esp-idf/components/esp_ringbuf /Users/simeon/esp/esp-idf/components/esp_rom /Users/simeon/esp/esp-idf/components/esp_security /Users/simeon/esp/esp-idf/components/esp_system /Users/simeon/esp/esp-idf/components/esp_timer /Users/simeon/esp/esp-idf/components/esp_vfs_console /Users/simeon/esp/esp-idf/components/esp_wifi /Users/simeon/esp/esp-idf/components/espcoredump /Users/simeon/esp/esp-idf/components/esptool_py /Users/simeon/esp/esp-idf/components/fatfs /Users/simeon/esp/esp-idf/components/freertos /Users/simeon/esp/esp-idf/components/hal /Users/simeon/esp/esp-idf/components/heap /Users/simeon/esp/esp-idf/components/http_parser /Users/simeon/esp/esp-idf/components/idf_test /Users/simeon/esp/esp-idf/components/ieee802154 /Users/simeon/esp/esp-idf/components/json /Users/simeon/esp/esp-idf/components/log /Users/simeon/esp/esp-idf/components/lwip /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/main /Users/simeon/esp/esp-idf/components/mbedtls /Users/simeon/esp/esp-idf/components/mqtt /Users/simeon/esp/esp-idf/components/newlib /Users/simeon/esp/esp-idf/components/nvs_flash /Users/simeon/esp/esp-idf/components/nvs_sec_provider /Users/simeon/esp/esp-idf/components/openthread /Users/simeon/esp/esp-idf/components/partition_table /Users/simeon/esp/esp-idf/components/protobuf-c /Users/simeon/esp/esp-idf/components/protocomm /Users/simeon/esp/esp-idf/components/pthread /Users/simeon/esp/esp-idf/components/riscv /Users/simeon/esp/esp-idf/components/rt /Users/simeon/esp/esp-idf/components/sdmmc /Users/simeon/esp/esp-idf/components/soc /Users/simeon/esp/esp-idf/components/spi_flash /Users/simeon/esp/esp-idf/components/spiffs /Users/simeon/esp/esp-idf/components/tcp_transport /Users/simeon/esp/esp-idf/components/ulp /Users/simeon/esp/esp-idf/components/unity /Users/simeon/esp/esp-idf/components/usb /Users/simeon/esp/esp-idf/components/vfs /Users/simeon/esp/esp-idf/components/wear_levelling /Users/simeon/esp/esp-idf/components/wifi_provisioning /Users/simeon/esp/esp-idf/components/wpa_supplicant
+-- Configuring done (5.9s)
+-- Generating done (1.6s)
+-- Build files have been written to: /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32h2
+-- Project sdkconfig file /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/sdkconfig
+-- Adding linker script /Users/simeon/esp/esp-idf/components/riscv/ld/rom.api.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/soc/esp32h2/ld/esp32h2.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.api.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.libgcc.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.wdt.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.systimer.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.version.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/esp_rom/esp32h2/ld/esp32h2.rom.newlib.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/bootloader/subproject/main/ld/esp32h2/bootloader.ld
+-- Adding linker script /Users/simeon/esp/esp-idf/components/bootloader/subproject/main/ld/esp32h2/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_security esp_system esptool_py freertos hal log main micro-ecc newlib partition_table riscv soc spi_flash
+-- Component paths: /Users/simeon/esp/esp-idf/components/bootloader /Users/simeon/esp/esp-idf/components/bootloader_support /Users/simeon/esp/esp-idf/components/efuse /Users/simeon/esp/esp-idf/components/esp_app_format /Users/simeon/esp/esp-idf/components/esp_bootloader_format /Users/simeon/esp/esp-idf/components/esp_common /Users/simeon/esp/esp-idf/components/esp_hw_support /Users/simeon/esp/esp-idf/components/esp_rom /Users/simeon/esp/esp-idf/components/esp_security /Users/simeon/esp/esp-idf/components/esp_system /Users/simeon/esp/esp-idf/components/esptool_py /Users/simeon/esp/esp-idf/components/freertos /Users/simeon/esp/esp-idf/components/hal /Users/simeon/esp/esp-idf/components/log /Users/simeon/esp/esp-idf/components/bootloader/subproject/main /Users/simeon/esp/esp-idf/components/bootloader/subproject/components/micro-ecc /Users/simeon/esp/esp-idf/components/newlib /Users/simeon/esp/esp-idf/components/partition_table /Users/simeon/esp/esp-idf/components/riscv /Users/simeon/esp/esp-idf/components/soc /Users/simeon/esp/esp-idf/components/spi_flash
+-- Configuring done (11.3s)
+-- Generating done (0.2s)
+-- Build files have been written to: /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build/bootloader
+[1/2] cd /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/bu...p/Repositories/energy-usage-sed-simple/build/bootloader/bootloader.bin
+Bootloader binary size 0x5880 bytes. 0x2780 bytes (31%) free.
+[1203/1205] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32h2 image...
+Merged 1 ELF section
+Successfully created esp32h2 image.
+Generated /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build/ot_sleepy_device.bin
+[1204/1205] cd /Users/simeon/Desktop/Repositories/energy-usage-sed-sim...esktop/Repositories/energy-usage-sed-simple/build/ot_sleepy_device.bin
+ot_sleepy_device.bin binary size 0xd4080 bytes. Smallest app partition is 0x120000 bytes. 0x4bf80 bytes (26%) free.
+Executing action: flash
+Running ninja in directory /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build
+Executing "ninja flash"...
+[1/5] cd /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/bu...esktop/Repositories/energy-usage-sed-simple/build/ot_sleepy_device.bin
+ot_sleepy_device.bin binary size 0xd4080 bytes. Smallest app partition is 0x120000 bytes. 0x4bf80 bytes (26%) free.
+[1/1] cd /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/bu...p/Repositories/energy-usage-sed-simple/build/bootloader/bootloader.bin
+Bootloader binary size 0x5880 bytes. 0x2780 bytes (31%) free.
+[4/5] cd /Users/simeon/esp/esp-idf/components/esptool_py && /opt/homeb... /Users/simeon/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32h2 -p /dev/cu.usbserial-12320 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 48m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 ot_sleepy_device.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port /dev/cu.usbserial-12320
+Connecting....
+Chip is ESP32-H2 (revision v0.1)
+Features: BLE, IEEE802.15.4
+Crystal is 32MHz
+MAC: 74:4d:bd:ff:fe:60:2d:5e
+BASE MAC: 74:4d:bd:60:2d:5e
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000e4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22656 bytes to 13559...
+Writing at 0x00000000... (100 %)
+Wrote 22656 bytes (13559 compressed) at 0x00000000 in 0.7 seconds (effective 276.7 kbit/s)...
+Hash of data verified.
+Compressed 868480 bytes to 480498...
+Writing at 0x000e13ef... (100 %)
+Wrote 868480 bytes (480498 compressed) at 0x00010000 in 11.7 seconds (effective 593.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 386.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Executing action: monitor
+Running idf_monitor in directory /Users/simeon/Desktop/Repositories/energy-usage-sed-simple
+Executing "/Users/simeon/.espressif/python_env/idf5.4_py3.12_env/bin/python /Users/simeon/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-12320 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32h2 --revision 0 --decode-panic backtrace /Users/simeon/Desktop/Repositories/energy-usage-sed-simple/build/ot_sleepy_device.elf -m '/Users/simeon/.espressif/python_env/idf5.4_py3.12_env/bin/python' '/Users/simeon/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-12320'"...
+--- esp-idf-monitor 1.4.0 on /dev/cu.usbserial-12320 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+I (418) efuse_�ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1960
+load:0x4083cad0,len:0xf20
+load:0x4083efd0,len:0x2fa8
+entry 0x4083cada
+I (23) boot: ESP-IDF f1c0e745a5 2nd stage bootloader
+I (24) boot: compile time Sep  3 2024 14:27:44
+I (25) boot: chip revision: v0.1
+I (27) boot: efuse block revision: v0.2
+I (31) boot.esp32h2: SPI Speed      : 64MHz
+I (36) boot.esp32h2: SPI Mode       : DIO
+I (41) boot.esp32h2: SPI Flash Size : 2MB
+I (46) boot: Enabling RNG early entropy source...
+I (51) boot: Partition Table:
+I (55) boot: ## Label            Usage          Type ST Offset   Length
+I (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (77) boot:  2 factory          factory app      00 00 00010000 00120000
+I (84) boot: End of partition table
+I (88) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=24e0ch (151052) map
+I (139) esp_image: segment 1: paddr=00034e34 vaddr=40800000 size=031e4h ( 12772) load
+I (144) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=9d3a4h (644004) map
+I (324) esp_image: segment 3: paddr=000d53cc vaddr=408031e4 size=0ce84h ( 52868) load
+I (341) esp_image: segment 4: paddr=000e2258 vaddr=40810070 size=01d88h (  7560) load
+I (345) esp_image: segment 5: paddr=000e3fe8 vaddr=50000000 size=0005ch (    92) load
+I (347) esp_image: segment 6: paddr=000e404c vaddr=5000005c size=00008h (     8) load
+I (360) boot: Loaded app from partition at offset 0x10000
+I (361) boot: Disabling RNG early entropy source...
+I (379) cpu_start: Unicore app
+I (388) cpu_start: Pro cpu start user code
+I (388) cpu_start: cpu freq: 96000000 Hz
+I (389) app_init: Application information:
+I (391) app_init: Project name:     ot_sleepy_device
+I (396) app_init: App version:      152117d-dirty
+I (402) app_init: Compile time:     Sep  3 2024 15:00:23
+I (408) app_init: ELF file SHA256:  cecbd63dc...
+I (413) app_init: ESP-IDF:          f1c0e745a5
+I (418) efuse_init: Min chip rev:     v0.0
+I (423) efuse_init: Max chip rev:     v0.99
+I (428) efuse_init: Chip rev:         v0.1
+I (433) heap_init: Initializing. RAM available for dynamic allocation:
+I (440) heap_init: At 4081A1C0 len 000331C0 (204 KiB): RAM
+I (446) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM
+I (453) spi_flash: detected chip: generic
+I (457) spi_flash: flash io: dio
+W (461) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (474) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (481) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (489) main_task: Started on CPU0
+I (499) main_task: Calling app_main()
+I (519) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10
+I (529) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22
+I(539) OPENTHREAD:[I] ChildSupervsn-: Timeout: 0 -> 190
+I(549) OPENTHREAD:[I] Settings------: Read NetworkInfo {rloc:0x7c01, extaddr:4a4ce316e43cbdb5, role:child, mode:0x04, version:5, keyseq:0x0, ...
+I(559) OPENTHREAD:[I] Settings------: ... pid:0x47eb855, mlecntr:0x8c0068, maccntr:0x8c038d, mliid:87c341966d073a5f}
+I(559) OPENTHREAD:[I] Settings------: Read ParentInfo {extaddr:0ea7ebdda163f418, version:5}
+I (579) OPENTHREAD: OpenThread attached to netif
+I(579) OPENTHREAD:[N] Mle-----------: Role disabled -> detached
+I (549) main_task: Returned from app_main()
+I (609) OT_STATE: netif up
+I(1469) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1479) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1489) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1499) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1509) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D F3 05 00 00 00 | .....c....M..... |
+I(1529) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1529) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1539) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1549) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1569) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(1579) OPENTHREAD:[N] Platform------: | 8D 90 25 02 04 2A 57 63 | D5 EC 46 4E 43 48 A0 E0 | ..%..*Wc..FNCH.. |
+I(1589) OPENTHREAD:[N] Platform------: | 1B 4C 12 E1 A3 51 82 76 | 1D 8B BA A7 A1 C3 48 7C | .L...Q.v......H| |
+I(1589) OPENTHREAD:[N] Platform------: | 7C 1B 5E F3 85 EA 08 6F | 38 29 AB 93 24 3D 67 B3 | |.^....o8)..$=g. |
+I(1609) OPENTHREAD:[N] Platform------: | 43 83 49 8B 50 18 40 55 | 97 69 7D 42 CB BB DB 9A | C.I.P.@U.i}B.... |
+I(1619) OPENTHREAD:[N] Platform------: | FE EF 2B 98 25 30 62 2F | 30 EA DA DA 97 8F 8A 16 | ..+.%0b/0....... |
+I(1629) OPENTHREAD:[N] Platform------: | 4F 95 78 98 EE A3 46 72 | E3 C4 DA C6 79          | O.x...Fr....y    |
+I(1639) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1659) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(1659) OPENTHREAD:[N] Platform------: | C0 B7 61 7F 7F 33 F0 4D | 4C 4D 4C 86 3B 00 15 A6 | ..a..3.MLML.;... |
+I(1669) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | C5 60 5A 20 6D C4 8E 28 | .........`Z m..( |
+I(1679) OPENTHREAD:[N] Platform------: | A1 9E E6 5D A6 47 45 38 | D9 C1 EE AC 0E 7F 92 F4 | ...].GE8........ |
+I(1699) OPENTHREAD:[N] Platform------: | 3B 9D CF 38 8D 15 C5 82 | F5 D3 DC 1E 18 0B EE 9D | ;..8............ |
+I(1709) OPENTHREAD:[N] Platform------: | 54 5F CE 78 A7 4E 44 63 | 79 1D 35 C5 2E 67 BF FD | T_.x.NDcy.5..g.. |
+I(1719) OPENTHREAD:[N] Platform------: | 3E 2F 09 8D DB 74 34 22 | 61 21 BF 39 0A          | >/...t4"a!.9.    |
+I(1719) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1739) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1749) OPENTHREAD:[N] Platform------: | B3 CC 5C 08             |                         | ..\.             |
+I(1759) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1859) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1869) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1879) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1889) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1899) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D F4 05 00 00 00 | .....c....M..... |
+I(1919) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1919) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1929) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1939) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1959) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=060]===================
+I(1969) OPENTHREAD:[N] Platform------: | DD 03 77 BC 2A B3 FD 04 | 77 78 23 A6 BD CE F7 24 | ..w.*...wx#....$ |
+I(1979) OPENTHREAD:[N] Platform------: | 07 C9 71 68 66 5C AE 3F | D8 A9 16 03 02 44 86 C0 | ..qhf\.?.....D.. |
+I(1979) OPENTHREAD:[N] Platform------: | 8B 1D 05 8E E5 83 B7 A9 | 9C 85 9F 6A 5F 76 8C 9B | ...........j_v.. |
+I(1989) OPENTHREAD:[N] Platform------: | 25 70 64 69 9D 0A 01 21 | BA 36 25 20             | %pdi...!.6%      |
+I(2009) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2019) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=060]===================
+I(2029) OPENTHREAD:[N] Platform------: | E0 B7 61 7F 10 31 2C E7 | CD F0 5E 3A 0E 13 9E 07 | ..a..1,...^:.... |
+I(2049) OPENTHREAD:[N] Platform------: | 60 03 EF 1D DC EB 8F 70 | 50 75 04 F0 B4 3F A0 3A | `......pPu...?.: |
+I(2049) OPENTHREAD:[N] Platform------: | F2 2D B3 86 35 56 35 94 | 16 47 7B C1 86 54 85 5F | .-..5V5..G{..T._ |
+I(2059) OPENTHREAD:[N] Platform------: | 73 8A 87 2E ED 0C DB CC | 1F 61 AE 65             | s........a.e     |
+I(2069) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2089) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(2099) OPENTHREAD:[N] Platform------: | B6 7E D6 DA             |                         | .~..             |
+I(2109) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2449) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(2459) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(2469) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2479) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(2489) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D F5 05 00 00 00 | .....c....M..... |
+I(2509) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2509) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(2519) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(2529) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2549) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(2559) OPENTHREAD:[N] Platform------: | C9 06 D3 68 48 D5 73 DA | 0B C2 42 DB D3 92 E3 74 | ...hH.s...B....t |
+I(2569) OPENTHREAD:[N] Platform------: | F5 3B 65 56 12 12 75 52 | CB BE C7 F5 73 3E B7 A4 | .;eV..uR....s>.. |
+I(2569) OPENTHREAD:[N] Platform------: | 4C 85 B7 6C 4C 4E 5F 7C | AF 23 5B 50 90 65 0A DC | L..lLN_|.#[P.e.. |
+I(2589) OPENTHREAD:[N] Platform------: | BD 46 37 F6 43 10 72 DF | 6F F7 3A 3F F0 75 51 F5 | .F7.C.r.o.:?.uQ. |
+I(2599) OPENTHREAD:[N] Platform------: | 89 31 E7 A5 EE 00 8C BA | D2 AC AB B3 B1 94 3E 89 | .1............>. |
+I(2609) OPENTHREAD:[N] Platform------: | 7B 5C 25 78 B4 74 5C 75 | 3A FE 66 F5 A8          | {\%x.t\u:.f..    |
+I(2619) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2639) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(2639) OPENTHREAD:[N] Platform------: | C0 B7 61 80 7F 33 F0 4D | 4C 4D 4C FB CF 00 15 A7 | ..a..3.MLML..... |
+I(2649) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | 1B 51 CB 26 F7 1B 3D E5 | .........Q.&..=. |
+I(2659) OPENTHREAD:[N] Platform------: | 4D 73 C4 81 BC 59 30 C9 | 4F 87 C5 B6 40 3D E8 9D | Ms...Y0.O...@=.. |
+I(2679) OPENTHREAD:[N] Platform------: | DB 0B D6 B3 66 01 4D C5 | 9D B1 00 5F 10 0B 30 A6 | ....f.M...._..0. |
+I(2689) OPENTHREAD:[N] Platform------: | 7E 58 67 2D 37 C4 63 D5 | E8 43 EA DE 37 A3 79 A0 | ~Xg-7.c..C..7.y. |
+I(2699) OPENTHREAD:[N] Platform------: | 24 D4 16 A8 0D E6 9E 7C | 87 69 A6 3A E0          | $......|.i.:.    |
+I(2699) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2719) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(2729) OPENTHREAD:[N] Platform------: | E7 BF 7F 73             |                         | ...s             |
+I(2739) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2839) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(2849) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(2859) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2869) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(2879) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D F6 05 00 00 00 | .....c....M..... |
+I(2899) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2899) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(2909) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(2919) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2939) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=060]===================
+I(2949) OPENTHREAD:[N] Platform------: | 67 A0 C8 92 7A D5 A8 AA | B1 64 E2 3F F3 F9 E7 D6 | g...z....d.?.... |
+I(2959) OPENTHREAD:[N] Platform------: | D0 FC 69 34 93 6E AE B3 | 7D 48 26 60 BF 92 15 1A | ..i4.n..}H&`.... |
+I(2959) OPENTHREAD:[N] Platform------: | B3 0D A0 E7 A7 EC 62 A9 | 79 BD F5 7D 39 94 0E C5 | ......b.y..}9... |
+I(2969) OPENTHREAD:[N] Platform------: | 20 93 C2 29 A3 4E 25 DF | D1 25 90 03             |  ..).N%..%..     |
+I(2989) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(2999) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=060]===================
+I(3009) OPENTHREAD:[N] Platform------: | E0 B7 61 80 10 C5 4C 05 | D4 B8 EB FC 7F F6 21 43 | ..a...L.......!C |
+I(3029) OPENTHREAD:[N] Platform------: | 04 84 AF AD D7 71 A9 00 | 7B 5F B8 A7 1D C7 CE CB | .....q..{_...... |
+I(3029) OPENTHREAD:[N] Platform------: | B4 68 30 69 51 A1 AA F2 | 32 85 BE 5A 43 1F 02 3E | .h0iQ...2..ZC..> |
+I(3039) OPENTHREAD:[N] Platform------: | 04 7F 7C B0 0E D4 E3 7B | 5B 3D EF FC             | ..|....{[=..     |
+I(3049) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3069) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(3079) OPENTHREAD:[N] Platform------: | 04 ED 58 B3             |                         | ..X.             |
+I(3089) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3419) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(3429) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(3439) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3449) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(3459) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D F7 05 00 00 00 | .....c....M..... |
+I(3479) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3479) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(3489) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(3499) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3519) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(3529) OPENTHREAD:[N] Platform------: | 8C 78 6F 9A 85 5B BA 86 | DF 43 22 3D 6F 5A 24 13 | .xo..[...C"=oZ$. |
+I(3539) OPENTHREAD:[N] Platform------: | FA 23 EA 98 14 62 E4 2D | 80 60 3B 5A 85 BE CE EF | .#...b.-.`;Z.... |
+I(3539) OPENTHREAD:[N] Platform------: | EE 6F A2 FD 98 A9 25 CA | 11 32 14 1C 4B 5C 15 92 | .o....%..2..K\.. |
+I(3559) OPENTHREAD:[N] Platform------: | 45 4D 6F AF 1D C7 21 FB | 3D D4 3A 4F B8 99 73 4D | EMo...!.=.:O..sM |
+I(3569) OPENTHREAD:[N] Platform------: | CB 26 5A FD 35 DA 6A 80 | D1 BB A5 BE E9 4F 1B 19 | .&Z.5.j......O.. |
+I(3579) OPENTHREAD:[N] Platform------: | E4 EC 8D 84 76 2F 7E F4 | 2E F6 2C 78 58          | ....v/~...,xX    |
+I(3589) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3609) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(3609) OPENTHREAD:[N] Platform------: | C0 B7 61 81 7F 33 F0 4D | 4C 4D 4C C1 B3 00 15 A8 | ..a..3.MLML..... |
+I(3619) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | 4C 13 DA 99 D7 FA F0 8D | ........L....... |
+I(3629) OPENTHREAD:[N] Platform------: | 86 8A DA 06 38 63 DA 0B | 0F BB 6C BB E6 FE 2F 54 | ....8c....l.../T |
+I(3649) OPENTHREAD:[N] Platform------: | C6 9A FD 7A 05 EB F7 5B | C7 6F A2 9E E0 EB EB 63 | ...z...[.o.....c |
+I(3659) OPENTHREAD:[N] Platform------: | FB E0 6D E6 61 75 C2 4D | 29 29 A8 1C 8F 93 61 FD | ..m.au.M))....a. |
+I(3669) OPENTHREAD:[N] Platform------: | F0 83 2C 8D 3C F2 51 68 | 69 6F 1C 73 58          | ..,.<.Qhio.sX    |
+I(3669) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3689) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(3699) OPENTHREAD:[N] Platform------: | 7D A4 62 AE             |                         | }.b.             |
+I(3709) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3809) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(3819) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(3829) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3839) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(3849) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D F8 05 00 00 00 | .....c....M..... |
+I(3869) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3869) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(3879) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(3889) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3909) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=060]===================
+I(3919) OPENTHREAD:[N] Platform------: | 39 2F 24 4F 6C 21 E1 60 | E1 51 90 A9 F9 B9 A3 B9 | 9/$Ol!.`.Q...... |
+I(3929) OPENTHREAD:[N] Platform------: | 73 30 60 35 19 99 7C AF | C1 12 85 51 3D D5 04 3C | s0`5..|....Q=..< |
+I(3929) OPENTHREAD:[N] Platform------: | 1C E7 57 EA 09 91 6B A0 | A8 D8 F8 33 42 3B 8E 89 | ..W...k....3B;.. |
+I(3939) OPENTHREAD:[N] Platform------: | 6B D3 FC 0A 10 E3 04 2B | DE 03 B1 5E             | k......+...^     |
+I(3959) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(3969) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=060]===================
+I(3979) OPENTHREAD:[N] Platform------: | E0 B7 61 81 10 1B 4F 39 | 25 50 DE 7B D7 86 41 61 | ..a...O9%P.{..Aa |
+I(3999) OPENTHREAD:[N] Platform------: | ED 38 63 6F DA 11 D8 B8 | CE BF 0A 9E F4 D1 E0 BC | .8co............ |
+I(3999) OPENTHREAD:[N] Platform------: | 6A 66 7E 04 D4 4A DC CF | C6 87 3A C3 13 B8 9E AA | jf~..J....:..... |
+I(4009) OPENTHREAD:[N] Platform------: | BF EF 61 5D 0F 79 3C F2 | 98 50 56 7B             | ..a].y<..PV{     |
+I(4019) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4039) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(4049) OPENTHREAD:[N] Platform------: | 43 07 86 DC             |                         | C...             |
+I(4059) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4379) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(4389) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(4399) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4409) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(4419) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D F9 05 00 00 00 | .....c....M..... |
+I(4439) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4439) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(4449) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(4459) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4479) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(4489) OPENTHREAD:[N] Platform------: | 8A C4 A0 3C 04 B1 1A D3 | E9 6E 12 A2 C9 CD 81 AB | ...<.....n...... |
+I(4499) OPENTHREAD:[N] Platform------: | 16 34 D4 81 9B 35 1D 9C | 44 96 08 25 F8 1A 88 B9 | .4...5..D..%.... |
+I(4499) OPENTHREAD:[N] Platform------: | 3D 87 79 17 2E 0F 4D 87 | 63 69 9E D9 63 82 CA 33 | =.y...M.ci..c..3 |
+I(4519) OPENTHREAD:[N] Platform------: | BD C1 5B CE A1 76 B9 B9 | 81 61 FD 53 8D DE 14 3C | ..[..v...a.S...< |
+I(4529) OPENTHREAD:[N] Platform------: | D2 34 3B 59 F5 C3 F1 F0 | 43 A7 28 BE 11 EC 88 8C | .4;Y....C.(..... |
+I(4539) OPENTHREAD:[N] Platform------: | 4D 38 F9 23 D6 6A 8F AA | D1 18 82 9A 7F          | M8.#.j.......    |
+I(4549) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4569) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(4569) OPENTHREAD:[N] Platform------: | C0 B7 61 82 7F 33 F0 4D | 4C 4D 4C F6 B4 00 15 A9 | ..a..3.MLML..... |
+I(4579) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | 0B 66 9D BE E7 1A 78 7A | .........f....xz |
+I(4589) OPENTHREAD:[N] Platform------: | EB BE 51 C7 1F EC CD 42 | 17 06 11 22 1A 69 20 13 | ..Q....B...".i . |
+I(4609) OPENTHREAD:[N] Platform------: | 60 AF E9 91 5C 2C 5B 93 | 14 A4 91 79 8E D1 34 D0 | `...\,[....y..4. |
+I(4619) OPENTHREAD:[N] Platform------: | B0 66 F2 AF 8F EF 33 70 | 37 A9 F8 1A 8F FA 9D 28 | .f....3p7......( |
+I(4629) OPENTHREAD:[N] Platform------: | C7 06 05 CB 65 CA 78 D6 | 93 76 B3 25 E6          | ....e.x..v.%.    |
+I(4629) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4649) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(4659) OPENTHREAD:[N] Platform------: | BD 67 98 B9             |                         | .g..             |
+I(4669) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4759) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(4769) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(4779) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4789) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(4799) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D FA 05 00 00 00 | .....c....M..... |
+I(4819) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4819) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(4829) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(4839) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4859) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=060]===================
+I(4869) OPENTHREAD:[N] Platform------: | 56 42 EC 70 01 4E 79 97 | D4 C7 F2 F6 9F 3D 2F F4 | VB.p.Ny......=/. |
+I(4879) OPENTHREAD:[N] Platform------: | FB 83 8C 9C A2 5D C8 69 | 9E 5E 82 BF 53 26 4D B7 | .....].i.^..S&M. |
+I(4879) OPENTHREAD:[N] Platform------: | D7 5C D4 9A 2B 5D EC BE | 3D CA 45 00 03 F8 2C 64 | .\..+]..=.E...,d |
+I(4889) OPENTHREAD:[N] Platform------: | D0 9F 05 C7 B6 0A 3B 6D | 7F 25 41 76             | ......;m.%Av     |
+I(4909) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4919) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=060]===================
+I(4929) OPENTHREAD:[N] Platform------: | E0 B7 61 82 10 D4 B2 2C | CD 16 B5 39 45 CE DF B8 | ..a....,...9E... |
+I(4949) OPENTHREAD:[N] Platform------: | 15 7F 1C 0E 74 8E 6C C7 | C1 C2 51 EE D8 AB E3 07 | ....t.l...Q..... |
+I(4949) OPENTHREAD:[N] Platform------: | BE D9 B6 A2 37 37 9C F5 | B2 A1 F2 A8 6E 31 8E AB | ....77......n1.. |
+I(4959) OPENTHREAD:[N] Platform------: | 18 7B 26 B7 DA E6 DB 20 | 8F 2C 42 BB             | .{&.... .,B.     |
+I(4969) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(4989) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(4999) OPENTHREAD:[N] Platform------: | 90 BF E3 AC             |                         | ....             |
+I(5009) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5429) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(5439) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(5449) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5459) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(5469) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D FB 05 00 00 00 | .....c....M..... |
+I(5489) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5489) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(5499) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(5509) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5529) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(5539) OPENTHREAD:[N] Platform------: | D9 41 58 05 C1 F6 F3 9E | 93 45 2D 1C F7 73 67 04 | .AX......E-..sg. |
+I(5549) OPENTHREAD:[N] Platform------: | C8 DE AB 66 A0 70 D9 12 | 8F 37 53 D2 65 38 D2 97 | ...f.p...7S.e8.. |
+I(5549) OPENTHREAD:[N] Platform------: | 47 5F F6 85 0A 84 80 9C | B5 D3 F3 AF 58 53 8F E0 | G_..........XS.. |
+I(5569) OPENTHREAD:[N] Platform------: | 77 31 FD 94 9B D1 01 1E | 6E 65 30 8E 54 19 2B 4C | w1......ne0.T.+L |
+I(5579) OPENTHREAD:[N] Platform------: | 62 D2 EE 4F 79 C6 07 BA | 7F DD BE 38 1F 5F 01 29 | b..Oy......8._.) |
+I(5589) OPENTHREAD:[N] Platform------: | 2D 8D 2E 27 7E D1 82 00 | 50 2F C2 A5 64          | -..'~...P/..d    |
+I(5599) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5619) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(5619) OPENTHREAD:[N] Platform------: | C0 B7 61 83 7F 33 F0 4D | 4C 4D 4C 41 EA 00 15 AA | ..a..3.MLMLA.... |
+I(5629) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | 95 D7 6C 20 6E D0 75 86 | ..........l n.u. |
+I(5639) OPENTHREAD:[N] Platform------: | AB 9D 9F C3 1E 36 40 AF | A7 82 C1 4F 58 FA 68 F1 | .....6@....OX.h. |
+I(5659) OPENTHREAD:[N] Platform------: | 40 01 24 00 98 7D F4 A8 | 55 EC 67 BB 22 ED B9 D5 | @.$..}..U.g."... |
+I(5669) OPENTHREAD:[N] Platform------: | 7C EE 84 33 BA 8B D7 27 | 27 28 0A 86 3D 5E 7F 0B | |..3...''(..=^.. |
+I(5679) OPENTHREAD:[N] Platform------: | 76 51 D4 32 66 15 59 FE | 4E 92 AB 04 B5          | vQ.2f.Y.N....    |
+I(5679) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5699) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(5709) OPENTHREAD:[N] Platform------: | E3 7E 2D 0F             |                         | .~-.             |
+I(5719) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5819) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(5829) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(5839) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5849) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(5859) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D FC 05 00 00 00 | .....c....M..... |
+I(5879) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5879) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(5889) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(5899) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5919) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=060]===================
+I(5929) OPENTHREAD:[N] Platform------: | B1 42 6A F9 86 9F 88 36 | 15 91 43 A0 92 93 A3 BB | .Bj....6..C..... |
+I(5939) OPENTHREAD:[N] Platform------: | CA 6A 42 B5 CD 47 3C 9A | 1B 06 84 EB 8A C9 17 37 | .jB..G<........7 |
+I(5939) OPENTHREAD:[N] Platform------: | 48 38 B2 33 FB 45 C5 85 | BF 21 17 52 1B 10 8A E0 | H8.3.E...!.R.... |
+I(5949) OPENTHREAD:[N] Platform------: | A1 35 10 A0 31 7C 08 60 | 4F B0 25 07             | .5..1|.`O.%.     |
+I(5969) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(5979) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=060]===================
+I(5989) OPENTHREAD:[N] Platform------: | E0 B7 61 83 10 A2 47 70 | 57 52 25 3A 59 07 D3 68 | ..a...GpWR%:Y..h |
+I(6009) OPENTHREAD:[N] Platform------: | 96 4E 7B CE 66 13 59 16 | 8C 89 D2 9E 91 A2 27 78 | .N{.f.Y.......'x |
+I(6009) OPENTHREAD:[N] Platform------: | 8B D5 73 9C 00 A1 37 AC | 84 AA C9 34 0E AA 5E C1 | ..s...7....4..^. |
+I(6019) OPENTHREAD:[N] Platform------: | C1 AB BA 11 1D 76 EA 27 | 81 FE 04 08             | .....v.'....     |
+I(6029) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(6049) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(6059) OPENTHREAD:[N] Platform------: | 9A 6E 65 2D             |                         | .ne-             |
+I(6069) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(6099) OPENTHREAD:[N] Mle-----------: RLOC16 7c01 -> fffe
+I(6789) OPENTHREAD:[N] Mle-----------: Attach attempt 1, AnyPartition reattaching with Active Dataset
+I(8519) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(8529) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(8539) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8549) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(8559) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D FD 05 00 00 00 | .....c....M..... |
+I(8579) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8579) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(8589) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(8599) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8619) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(8629) OPENTHREAD:[N] Platform------: | 0F E4 73 6E A5 F0 F7 2D | A8 64 FA 1A 1C DB 50 85 | ..sn...-.d....P. |
+I(8639) OPENTHREAD:[N] Platform------: | A0 6A E9 DE F0 85 09 1F | 78 1F F5 A5 ED 26 87 32 | .j......x....&.2 |
+I(8639) OPENTHREAD:[N] Platform------: | 03 CA F5 23 7C 2A F3 AD | 64 EB 50 51 3E 5B 70 22 | ...#|*..d.PQ>[p" |
+I(8659) OPENTHREAD:[N] Platform------: | 06 84 FC A1 EA B5 30 87 | 07 7C C3 B4 61 D0 15 40 | ......0..|..a..@ |
+I(8669) OPENTHREAD:[N] Platform------: | 22 CA F3 0E 03 05 45 29 | 10 71 6E 1F 75 7E D3 01 | ".....E).qn.u~.. |
+I(8679) OPENTHREAD:[N] Platform------: | 02 E4 40 AF BA 93 04 21 | 96 12 9A EA F3          | ..@....!.....    |
+I(8689) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8709) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(8709) OPENTHREAD:[N] Platform------: | C0 B3 61 84 7F 33 F0 4D | 4C 4D 4C 98 91 00 15 AE | ..a..3.MLML..... |
+I(8719) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | D7 03 34 B4 D0 A1 8E DD | ..........4..... |
+I(8729) OPENTHREAD:[N] Platform------: | FC 85 E0 EA 85 91 CB 79 | E3 47 EE C6 BB 99 64 E0 | .......y.G....d. |
+I(8749) OPENTHREAD:[N] Platform------: | D3 1F F8 29 DD D8 64 5D | 60 30 CE 8B FA 2B D6 CD | ...)..d]`0...+.. |
+I(8759) OPENTHREAD:[N] Platform------: | C5 2F 19 25 BB 73 8D 61 | 9F 0E 8B A5 EA F4 E3 14 | ./.%.s.a........ |
+I(8769) OPENTHREAD:[N] Platform------: | A1 5E 08 5B 66 51 08 02 | 19 3B F4 FB B0          | .^.[fQ...;...    |
+I(8769) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8789) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(8799) OPENTHREAD:[N] Platform------: | D6 86 0F 0C             |                         | ....             |
+I(8809) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8909) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(8919) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(8929) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8939) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(8949) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D FE 05 00 00 00 | .....c....M..... |
+I(8969) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(8969) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(8979) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(8989) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9009) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=056]===================
+I(9019) OPENTHREAD:[N] Platform------: | F2 D7 71 1B 5D B7 73 54 | 69 31 26 43 9E 6C 31 57 | ..q.].sTi1&C.l1W |
+I(9029) OPENTHREAD:[N] Platform------: | C5 C5 29 1B 52 2F 07 23 | 9C 10 03 7D E5 52 46 F4 | ..).R/.#...}.RF. |
+I(9029) OPENTHREAD:[N] Platform------: | D7 DF 42 23 F3 34 90 F7 | 7F F4 2D EB AD 02 83 E5 | ..B#.4....-..... |
+I(9039) OPENTHREAD:[N] Platform------: | 99 66 D3 D5 E2 05 5C 01 |                         | .f....\.         |
+I(9059) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9069) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=056]===================
+I(9079) OPENTHREAD:[N] Platform------: | E0 B3 61 84 10 03 27 6C | 0C CB 07 84 46 F0 52 E6 | ..a...'l....F.R. |
+I(9099) OPENTHREAD:[N] Platform------: | 11 A2 59 69 6D 15 65 A9 | 85 8C 85 9C 49 B1 B5 20 | ..Yim.e.....I..  |
+I(9099) OPENTHREAD:[N] Platform------: | BE EA 44 F8 0C DF A5 EE | 5C 9C 22 BF C4 D1 50 85 | ..D.....\."...P. |
+I(9109) OPENTHREAD:[N] Platform------: | D9 47 D8 B0 9A 05 74 52 |                         | .G....tR         |
+I(9119) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9139) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(9149) OPENTHREAD:[N] Platform------: | BB 96 2B 6D             |                         | ..+m             |
+I(9159) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9169) OPENTHREAD:[N] Mle-----------: RLOC16 fffe -> 7c01
+I(9169) OPENTHREAD:[N] Mle-----------: Role detached -> child
+I(9209) OPENTHREAD:[N] Platform------: ---------------------------
+I(9209) OPENTHREAD:[N] Platform------: Cipher Suite: ASCON-128 (LibAscon)
+I(9229) OPENTHREAD:[N] Platform------: Max TX Power is: 20 dBm
+I(9229) OPENTHREAD:[N] Platform------: This device is the front door motion sensor.
+I(9239) OPENTHREAD:[N] Platform------: The Poll Period is 30000 ms
+I(9239) OPENTHREAD:[N] Platform------: The Mesh Local EID is fd84:7733:23a0:f199:87c3:4196:6d07:3a5f.
+I(9249) OPENTHREAD:[N] Platform------: ---------------------------
+I(9499) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(9499) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(9519) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9529) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(9539) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4D FF 05 00 00 00 | .....c....M..... |
+I(9549) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9559) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(9569) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(9579) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9589) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(9609) OPENTHREAD:[N] Platform------: | 07 03 19 DA 1C 0F C0 05 | B4 87 8B 4D E0 91 27 1B | ...........M..'. |
+I(9619) OPENTHREAD:[N] Platform------: | D1 AC 05 F3 C7 A5 84 1B | 36 9A 22 6C CC 3F C2    | ........6."l.?.  |
+I(9619) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9639) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(9649) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(9659) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 7A | B5 62 43 4E B3 0D 8E    | :_..3.3z.bCN...  |
+I(9669) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(9679) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(9689) OPENTHREAD:[N] Platform------: | 1F 02 F0 BD             |                         | ....             |
+I(9699) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x5 (SLEEP_WAKEUP),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1960
+load:0x4083cad0,len:0xf20
+load:0x4083efd0,len:0x2fa8
+entry 0x4083cada
+I (24) boot: ESP-IDF f1c0e745a5 2nd stage bootloader
+I (24) boot: compile time Sep  3 2024 14:27:44
+I (25) boot: chip revision: v0.1
+I (27) boot: efuse block revision: v0.2
+I (32) boot.esp32h2: SPI Speed      : 64MHz
+I (37) boot.esp32h2: SPI Mode       : DIO
+I (41) boot.esp32h2: SPI Flash Size : 2MB
+I (46) boot: Enabling RNG early entropy source...
+I (52) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=24e0ch (151052) map
+I (60) esp_image: segment 1: paddr=00034e34 vaddr=40800000 size=031e4h ( 12772) load
+I (70) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=9d3a4h (644004) map
+I (77) esp_image: segment 3: paddr=000d53cc vaddr=408031e4 size=0ce84h ( 52868) load
+I (90) esp_image: segment 4: paddr=000e2258 vaddr=40810070 size=01d88h (  7560) load
+I (94) esp_image: segment 5: paddr=000e3fe8 vaddr=50000000 size=0005ch (    92)
+I (101) esp_image: segment 6: paddr=000e404c vaddr=5000005c size=00008h (     8)
+I (110) boot: Fast booting app from partition at offset 0x10000
+I (116) boot: Disabling RNG early entropy source...
+I (134) cpu_start: Unicore app
+I (143) cpu_start: Pro cpu start user code
+I (143) cpu_start: cpu freq: 96000000 Hz
+I (143) app_init: Application information:
+I (145) app_init: Project name:     ot_sleepy_device
+I (151) app_init: App version:      152117d-dirty
+I (156) app_init: Compile time:     Sep  3 2024 15:00:23
+I (162) app_init: ELF file SHA256:  cecbd63dc...
+I (168) app_init: ESP-IDF:          f1c0e745a5
+I (173) efuse_init: Min chip rev:     v0.0
+I (178) efuse_init: Max chip rev:     v0.99
+I (183) efuse_init: Chip rev:         v0.1
+I (188) heap_init: Initializing. RAM available for dynamic allocation:
+I (195) heap_init: At 4081A1C0 len 000331C0 (204 KiB): RAM
+I (201) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM
+I (208) spi_flash: detected chip: generic
+I (212) spi_flash: flash io: dio
+W (215) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (236) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (244) main_task: Started on CPU0
+I (254) main_task: Calling app_main()
+I (274) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10
+I (274) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22
+I(294) OPENTHREAD:[I] ChildSupervsn-: Timeout: 0 -> 190
+I(294) OPENTHREAD:[I] Settings------: Read NetworkInfo {rloc:0x7c01, extaddr:4a4ce316e43cbdb5, role:child, mode:0x04, version:5, keyseq:0x0, ...
+I(314) OPENTHREAD:[I] Settings------: ... pid:0x9e25f8e, mlecntr:0x8c0458, maccntr:0x8c0791, mliid:87c341966d073a5f}
+I(314) OPENTHREAD:[I] Settings------: Read ParentInfo {extaddr:0ea7ebdda163f418, version:5}
+I (324) OPENTHREAD: OpenThread attached to netif
+I(334) OPENTHREAD:[N] Mle-----------: Role disabled -> detached
+I (304) main_task: Returned from app_main()
+I (364) OT_STATE: netif up
+I(514) OPENTHREAD:[N] Mle-----------: Role detached -> child
+W(524) OPENTHREAD:[W] Mle-----------: Failed to process Child Update Response as child: NotFound
+I(654) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(654) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(674) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(684) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(694) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 00 05 00 00 00 | .....c....N..... |
+I(704) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(714) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(724) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(734) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(744) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(764) OPENTHREAD:[N] Platform------: | CE 3B 62 04 96 2D 04 13 | D6 BD 31 5A 23 D3 F3 24 | .;b..-....1Z#..$ |
+I(774) OPENTHREAD:[N] Platform------: | E0 F9 73 EE 3A 1A ED EB | 8F 98 FE 01 58 0B 9B A3 | ..s.:.......X... |
+I(774) OPENTHREAD:[N] Platform------: | A5 AD E4 E1 51 25 73 45 | 6D 34 52 C8 EC 45 36 93 | ....Q%sEm4R..E6. |
+I(784) OPENTHREAD:[N] Platform------: | 8B 3B E5 18 82 F8 0C C3 | AC AF 49 B1 7F 96 3D DE | .;........I...=. |
+I(804) OPENTHREAD:[N] Platform------: | 94 4D 6B 48 0D FA E3 08 | 68 8B B9 29 FC 42 A5 CD | .MkH....h..).B.. |
+I(814) OPENTHREAD:[N] Platform------: | 51 77 27 1A F2 D1 2D 85 | A8 85 A4 C0 D2          | Qw'...-......    |
+I(824) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(834) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(844) OPENTHREAD:[N] Platform------: | C0 A9 61 85 7F 33 F0 4D | 4C 4D 4C D3 F8 00 15 B3 | ..a..3.MLML..... |
+I(854) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | 49 31 3A EC 0B DA E0 1E | ........I1:..... |
+I(864) OPENTHREAD:[N] Platform------: | C3 BB 87 A4 8B B9 96 EB | 49 CC F5 8E 9A 45 DF B7 | ........I....E.. |
+I(874) OPENTHREAD:[N] Platform------: | E0 48 A2 54 70 3F 5A B9 | B7 2B 62 E2 B4 22 42 70 | .H.Tp?Z..+b.."Bp |
+I(894) OPENTHREAD:[N] Platform------: | F8 2F 87 F5 4B 94 B0 66 | F9 8D 49 4B 36 E3 E3 36 | ./..K..f..IK6..6 |
+I(894) OPENTHREAD:[N] Platform------: | 57 CB 9D B3 9D 76 E5 9E | 5C 5F 45 93 49          | W....v..\_E.I    |
+I(904) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(914) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(934) OPENTHREAD:[N] Platform------: | 41 C3 16 C2             |                         | A...             |
+I(944) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1034) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1034) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1054) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1064) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1074) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 01 05 00 00 00 | .....c....N..... |
+I(1084) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1094) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1104) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1114) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1124) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=046]===================
+I(1144) OPENTHREAD:[N] Platform------: | 8F BF D7 85 CE FD 05 43 | 02 46 62 02 C8 78 69 FB | .......C.Fb..xi. |
+I(1154) OPENTHREAD:[N] Platform------: | 68 DD 3B DF 34 4F 18 23 | E2 B3 16 F2 49 23 BD 4C | h.;.4O.#....I#.L |
+I(1154) OPENTHREAD:[N] Platform------: | 3D DA 45 06 FA AA EE 9A | CD D0 33 54 0D 16       | =.E.......3T..   |
+I(1164) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1184) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=046]===================
+I(1194) OPENTHREAD:[N] Platform------: | E0 A9 61 85 10 C4 94 DD | 85 8A 0D 23 D9 05 E6 EA | ..a........#.... |
+I(1204) OPENTHREAD:[N] Platform------: | 7A B9 DB EB 0F 8D 79 30 | AC E3 78 6A D0 D7 F1 8D | z.....y0..xj.... |
+I(1214) OPENTHREAD:[N] Platform------: | 68 AD C9 FF C0 D4 AC 10 | F6 6E FF 64 EE 68       | h........n.d.h   |
+I(1214) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1234) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1244) OPENTHREAD:[N] Platform------: | 8E 21 44 2E             |                         | .!D.             |
+I(1254) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1344) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1344) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1354) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1374) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1384) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 02 05 00 00 00 | .....c....N..... |
+I(1394) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1394) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1414) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(1424) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1434) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(1444) OPENTHREAD:[N] Platform------: | 64 58 C1 39 C2 12 AE 97 | F6 C1 F3 7F 1C DF AE 4D | dX.9...........M |
+I(1464) OPENTHREAD:[N] Platform------: | 6F 5D EF 8D 28 B3 E2 6B | 01 11 E3 5C 3B 75 18    | o]..(..k...\;u.  |
+I(1464) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1474) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(1494) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(1504) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 22 | DB 62 43 99 AB 1A 70    | :_..3.3".bC...p  |
+I(1514) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1524) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1524) OPENTHREAD:[N] Platform------: | 12 4B EA A8             |                         | .K..             |
+I(1544) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x5 (SLEEP_WAKEUP),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1960
+load:0x4083cad0,len:0xf20
+load:0x4083efd0,len:0x2fa8
+entry 0x4083cada
+I (24) boot: ESP-IDF f1c0e745a5 2nd stage bootloader
+I (24) boot: compile time Sep  3 2024 14:27:44
+I (25) boot: chip revision: v0.1
+I (27) boot: efuse block revision: v0.2
+I (32) boot.esp32h2: SPI Speed      : 64MHz
+I (37) boot.esp32h2: SPI Mode       : DIO
+I (41) boot.esp32h2: SPI Flash Size : 2MB
+I (46) boot: Enabling RNG early entropy source...
+I (52) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=24e0ch (151052) map
+I (60) esp_image: segment 1: paddr=00034e34 vaddr=40800000 size=031e4h ( 12772) load
+I (70) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=9d3a4h (644004) map
+I (77) esp_image: segment 3: paddr=000d53cc vaddr=408031e4 size=0ce84h ( 52868) load
+I (90) esp_image: segment 4: paddr=000e2258 vaddr=40810070 size=01d88h (  7560) load
+I (94) esp_image: segment 5: paddr=000e3fe8 vaddr=50000000 size=0005ch (    92)
+I (101) esp_image: segment 6: paddr=000e404c vaddr=5000005c size=00008h (     8)
+I (110) boot: Fast booting app from partition at offset 0x10000
+I (116) boot: Disabling RNG early entropy source...
+I (134) cpu_start: Unicore app
+I (143) cpu_start: Pro cpu start user code
+I (143) cpu_start: cpu freq: 96000000 Hz
+I (143) app_init: Application information:
+I (145) app_init: Project name:     ot_sleepy_device
+I (151) app_init: App version:      152117d-dirty
+I (156) app_init: Compile time:     Sep  3 2024 15:00:23
+I (162) app_init: ELF file SHA256:  cecbd63dc...
+I (168) app_init: ESP-IDF:          f1c0e745a5
+I (173) efuse_init: Min chip rev:     v0.0
+I (178) efuse_init: Max chip rev:     v0.99
+I (183) efuse_init: Chip rev:         v0.1
+I (188) heap_init: Initializing. RAM available for dynamic allocation:
+I (195) heap_init: At 4081A1C0 len 000331C0 (204 KiB): RAM
+I (201) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM
+I (208) spi_flash: detected chip: generic
+I (212) spi_flash: flash io: dio
+W (215) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (236) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (244) main_task: Started on CPU0
+I (254) main_task: Calling app_main()
+I (274) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10
+I (284) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22
+I(294) OPENTHREAD:[I] ChildSupervsn-: Timeout: 0 -> 190
+I(304) OPENTHREAD:[I] Settings------: Read NetworkInfo {rloc:0x7c01, extaddr:4a4ce316e43cbdb5, role:child, mode:0x04, version:5, keyseq:0x0, ...
+I(314) OPENTHREAD:[I] Settings------: ... pid:0x9e25f8e, mlecntr:0x8c0841, maccntr:0x8c0b7a, mliid:87c341966d073a5f}
+I(314) OPENTHREAD:[I] Settings------: Read ParentInfo {extaddr:0ea7ebdda163f418, version:5}
+I (334) OPENTHREAD: OpenThread attached to netif
+I(334) OPENTHREAD:[N] Mle-----------: Role disabled -> detached
+I (304) main_task: Returned from app_main()
+I (364) OT_STATE: netif up
+I(504) OPENTHREAD:[N] Mle-----------: Role detached -> child
+W(504) OPENTHREAD:[W] Mle-----------: Failed to process Child Update Response as child: NotFound
+I(654) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(654) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(664) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(684) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(694) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 03 05 00 00 00 | .....c....N..... |
+I(704) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(704) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(724) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(734) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(744) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(754) OPENTHREAD:[N] Platform------: | A9 23 38 06 B3 4C 07 83 | 8B 53 9C 46 73 02 CC D2 | .#8..L...S.Fs... |
+I(774) OPENTHREAD:[N] Platform------: | 28 79 06 3A 1D D3 02 5E | 7C D7 35 B0 53 44 89 91 | (y.:...^|.5.SD.. |
+I(774) OPENTHREAD:[N] Platform------: | 27 AE B8 4A 03 5C CB 83 | 1F 72 6B 4C 8E AF FB 9F | '..J.\...rkL.... |
+I(784) OPENTHREAD:[N] Platform------: | D8 6C 1F 58 2E AD 57 28 | 4B B8 D0 88 B5 25 7C 11 | .l.X..W(K....%|. |
+I(794) OPENTHREAD:[N] Platform------: | D4 22 4F 26 4A BD 6C 8D | 35 ED 61 B6 75 BC 05 5F | ."O&J.l.5.a.u.._ |
+I(814) OPENTHREAD:[N] Platform------: | 12 E5 4C 4F 77 DD 11 D1 | DC 84 0B B9 1D          | ..LOw........    |
+I(824) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(824) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(834) OPENTHREAD:[N] Platform------: | C0 A9 61 86 7F 33 F0 4D | 4C 4D 4C 0C 2C 00 15 B7 | ..a..3.MLML.,... |
+I(854) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | E8 F1 93 62 EF CD CF 5B | ...........b...[ |
+I(864) OPENTHREAD:[N] Platform------: | CC 7D E3 D5 22 81 F4 96 | 1E F9 99 E2 86 F6 6B EE | .}..".........k. |
+I(874) OPENTHREAD:[N] Platform------: | D2 B9 4A 2E 5A AE 0F 11 | 09 CB 22 B8 4E 5A 54 D9 | ..J.Z.....".NZT. |
+I(884) OPENTHREAD:[N] Platform------: | 7B E6 9B 66 A1 C0 B8 B1 | CF FB 71 D3 E1 71 87 BD | {..f......q..q.. |
+I(894) OPENTHREAD:[N] Platform------: | 1C B5 CD DB EE 75 5F C8 | 9E B6 00 C5 26          | .....u_.....&    |
+I(904) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(914) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(924) OPENTHREAD:[N] Platform------: | EF 22 6A D2             |                         | ."j.             |
+I(944) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1014) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1014) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1024) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1034) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1054) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 04 05 00 00 00 | .....c....N..... |
+I(1064) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1064) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1074) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1094) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1104) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=046]===================
+I(1114) OPENTHREAD:[N] Platform------: | 03 17 37 F6 A4 08 4E D8 | FF 5D 20 A6 2D B0 C5 0F | ..7...N..] .-... |
+I(1124) OPENTHREAD:[N] Platform------: | B7 A7 A1 50 CE 50 33 F5 | BC 78 9B 54 A9 A1 EF 3A | ...P.P3..x.T...: |
+I(1134) OPENTHREAD:[N] Platform------: | 7E 25 CD BE 95 B2 7B 24 | B7 3B 41 65 36 39       | ~%....{$.;Ae69   |
+I(1144) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1154) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=046]===================
+I(1164) OPENTHREAD:[N] Platform------: | E0 A9 61 86 10 9A 63 5D | 24 82 B0 C7 E4 A8 02 46 | ..a...c]$......F |
+I(1184) OPENTHREAD:[N] Platform------: | 4B 0E F1 25 F6 91 BC EC | 28 57 78 44 35 3B DB E4 | K..%....(WxD5;.. |
+I(1194) OPENTHREAD:[N] Platform------: | C2 06 C2 39 85 49 22 76 | 81 7B E8 48 BA BB       | ...9.I"v.{.H..   |
+I(1194) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1204) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1224) OPENTHREAD:[N] Platform------: | 4D 58 20 7E             |                         | MX ~             |
+I(1234) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1334) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1334) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1344) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1354) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1374) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 05 05 00 00 00 | .....c....N..... |
+I(1384) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1384) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1394) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(1414) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1424) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(1434) OPENTHREAD:[N] Platform------: | ED 13 BB BB DA F9 21 0A | 27 56 45 EB 7E 38 C2 CA | ......!.'VE.~8.. |
+I(1444) OPENTHREAD:[N] Platform------: | 7C 7A 9A 33 95 04 52 57 | 3D 7F 83 60 FF 79 A5    | |z.3..RW=..`.y.  |
+I(1454) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1464) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(1474) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(1484) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 94 | 3E 62 43 1B 6D 27 4B    | :_..3.3.>bC.m'K  |
+I(1504) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1514) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1514) OPENTHREAD:[N] Platform------: | F2 70 9A 12             |                         | .p..             |
+I(1524) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x5 (SLEEP_WAKEUP),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1960
+load:0x4083cad0,len:0xf20
+load:0x4083efd0,len:0x2fa8
+entry 0x4083cada
+I (24) boot: ESP-IDF f1c0e745a5 2nd stage bootloader
+I (24) boot: compile time Sep  3 2024 14:27:44
+I (25) boot: chip revision: v0.1
+I (27) boot: efuse block revision: v0.2
+I (32) boot.esp32h2: SPI Speed      : 64MHz
+I (37) boot.esp32h2: SPI Mode       : DIO
+I (41) boot.esp32h2: SPI Flash Size : 2MB
+I (46) boot: Enabling RNG early entropy source...
+I (52) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=24e0ch (151052) map
+I (60) esp_image: segment 1: paddr=00034e34 vaddr=40800000 size=031e4h ( 12772) load
+I (70) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=9d3a4h (644004) map
+I (77) esp_image: segment 3: paddr=000d53cc vaddr=408031e4 size=0ce84h ( 52868) load
+I (90) esp_image: segment 4: paddr=000e2258 vaddr=40810070 size=01d88h (  7560) load
+I (94) esp_image: segment 5: paddr=000e3fe8 vaddr=50000000 size=0005ch (    92)
+I (101) esp_image: segment 6: paddr=000e404c vaddr=5000005c size=00008h (     8)
+I (110) boot: Fast booting app from partition at offset 0x10000
+I (116) boot: Disabling RNG early entropy source...
+I (134) cpu_start: Unicore app
+I (143) cpu_start: Pro cpu start user code
+I (143) cpu_start: cpu freq: 96000000 Hz
+I (143) app_init: Application information:
+I (145) app_init: Project name:     ot_sleepy_device
+I (151) app_init: App version:      152117d-dirty
+I (156) app_init: Compile time:     Sep  3 2024 15:00:23
+I (162) app_init: ELF file SHA256:  cecbd63dc...
+I (168) app_init: ESP-IDF:          f1c0e745a5
+I (173) efuse_init: Min chip rev:     v0.0
+I (178) efuse_init: Max chip rev:     v0.99
+I (183) efuse_init: Chip rev:         v0.1
+I (188) heap_init: Initializing. RAM available for dynamic allocation:
+I (195) heap_init: At 4081A1C0 len 000331C0 (204 KiB): RAM
+I (201) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM
+I (208) spi_flash: detected chip: generic
+I (212) spi_flash: flash io: dio
+W (215) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (236) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (244) main_task: Started on CPU0
+I (254) main_task: Calling app_main()
+I (274) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10
+I (284) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22
+I(294) OPENTHREAD:[I] ChildSupervsn-: Timeout: 0 -> 190
+I(304) OPENTHREAD:[I] Settings------: Read NetworkInfo {rloc:0x7c01, extaddr:4a4ce316e43cbdb5, role:child, mode:0x04, version:5, keyseq:0x0, ...
+I(314) OPENTHREAD:[I] Settings------: ... pid:0x9e25f8e, mlecntr:0x8c0c2a, maccntr:0x8c0f63, mliid:87c341966d073a5f}
+I(314) OPENTHREAD:[I] Settings------: Read ParentInfo {extaddr:0ea7ebdda163f418, version:5}
+I (334) OPENTHREAD: OpenThread attached to netif
+I(334) OPENTHREAD:[N] Mle-----------: Role disabled -> detached
+I (304) main_task: Returned from app_main()
+I (364) OT_STATE: netif up
+I(504) OPENTHREAD:[N] Mle-----------: Role detached -> child
+W(504) OPENTHREAD:[W] Mle-----------: Failed to process Child Update Response as child: NotFound
+I(664) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(664) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(674) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(694) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(704) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 06 05 00 00 00 | .....c....N..... |
+I(714) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(714) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(734) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(744) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(754) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(764) OPENTHREAD:[N] Platform------: | 98 B1 7D 94 14 7D 92 B9 | 09 0D 50 AB 6D B5 D0 E2 | ..}..}....P.m... |
+I(784) OPENTHREAD:[N] Platform------: | B5 77 19 25 3C DD 53 16 | E1 36 2F 1C FD 51 7B 99 | .w.%<.S..6/..Q{. |
+I(784) OPENTHREAD:[N] Platform------: | 69 BE BC A3 C1 DA 52 45 | DD 71 F2 6F 29 25 9D 5F | i.....RE.q.o)%._ |
+I(794) OPENTHREAD:[N] Platform------: | 5D C9 BA 48 4F B3 D8 BF | F5 D2 53 10 B2 73 80 13 | ]..HO.....S..s.. |
+I(804) OPENTHREAD:[N] Platform------: | 3C 4F F4 B6 86 F0 0A 66 | AB D6 A5 98 D8 1B 7E A2 | <O.....f......~. |
+I(824) OPENTHREAD:[N] Platform------: | 93 CE C8 AF 25 89 5E CA | 2B 33 4C 00 45          | ....%.^.+3L.E    |
+I(834) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(844) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(844) OPENTHREAD:[N] Platform------: | C0 A9 61 87 7F 33 F0 4D | 4C 4D 4C D2 BF 00 15 BB | ..a..3.MLML..... |
+I(864) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | 6C C7 77 A8 ED D6 C0 75 | ........l.w....u |
+I(874) OPENTHREAD:[N] Platform------: | 4E 01 90 33 C3 DD A3 95 | 9D E8 69 81 1D F9 D0 42 | N..3......i....B |
+I(884) OPENTHREAD:[N] Platform------: | 82 58 22 C1 FD 15 61 40 | D1 72 75 73 7C 20 87 B8 | .X"...a@.rus| .. |
+I(894) OPENTHREAD:[N] Platform------: | 9C E0 B6 D2 0E 5D B6 3A | 1B 24 F3 65 89 A6 C8 5F | .....].:.$.e..._ |
+I(904) OPENTHREAD:[N] Platform------: | B5 C9 E2 06 CB 73 F4 C6 | 1E 43 B4 B8 EB          | .....s...C...    |
+I(914) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(924) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(934) OPENTHREAD:[N] Platform------: | 55 DB 10 71             |                         | U..q             |
+I(954) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1034) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1034) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1044) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1054) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1074) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 07 05 00 00 00 | .....c....N..... |
+I(1084) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1084) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1094) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1114) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1124) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=046]===================
+I(1134) OPENTHREAD:[N] Platform------: | 79 52 9E B9 E0 43 86 47 | CB 8E 7E CE 30 73 3F 12 | yR...C.G..~.0s?. |
+I(1144) OPENTHREAD:[N] Platform------: | CD 15 A4 10 B1 B3 17 70 | BF 50 42 5A 19 7F 86 5B | .......p.PBZ...[ |
+I(1154) OPENTHREAD:[N] Platform------: | 85 42 AE C7 FA 13 08 A9 | C1 17 DD 8E 27 68       | .B..........'h   |
+I(1164) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1174) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=046]===================
+I(1184) OPENTHREAD:[N] Platform------: | E0 A9 61 87 10 FC 00 33 | F3 6A 32 35 48 1A 73 51 | ..a....3.j25H.sQ |
+I(1204) OPENTHREAD:[N] Platform------: | 7C 73 EC 16 B7 FF 04 E7 | 01 7C 93 15 1D 53 BA C0 | |s.......|...S.. |
+I(1214) OPENTHREAD:[N] Platform------: | 1B 12 1A 37 69 04 78 41 | DF 88 5F BD 29 22       | ...7i.xA.._.)"   |
+I(1214) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1224) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1244) OPENTHREAD:[N] Platform------: | 75 D2 43 46             |                         | u.CF             |
+I(1254) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1344) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1344) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1354) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1364) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1384) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 08 05 00 00 00 | .....c....N..... |
+I(1394) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1394) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1404) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(1424) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1434) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(1444) OPENTHREAD:[N] Platform------: | 02 CA 40 FE 7C 52 BE EC | E1 E2 52 98 95 C9 88 9B | ..@.|R....R..... |
+I(1454) OPENTHREAD:[N] Platform------: | 2B 12 1C 20 31 75 94 4A | 37 9D ED 9F B2 AB 75    | +.. 1u.J7.....u  |
+I(1464) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1474) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(1484) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(1494) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 35 | DF 62 43 F7 98 A9 7E    | :_..3.35.bC...~  |
+I(1514) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1514) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1524) OPENTHREAD:[N] Platform------: | 2B 85 B2 44             |                         | +..D             |
+I(1534) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x5 (SLEEP_WAKEUP),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1960
+load:0x4083cad0,len:0xf20
+load:0x4083efd0,len:0x2fa8
+entry 0x4083cada
+I (24) boot: ESP-IDF f1c0e745a5 2nd stage bootloader
+I (24) boot: compile time Sep  3 2024 14:27:44
+I (25) boot: chip revision: v0.1
+I (27) boot: efuse block revision: v0.2
+I (32) boot.esp32h2: SPI Speed      : 64MHz
+I (37) boot.esp32h2: SPI Mode       : DIO
+I (41) boot.esp32h2: SPI Flash Size : 2MB
+I (46) boot: Enabling RNG early entropy source...
+I (52) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=24e0ch (151052) map
+I (60) esp_image: segment 1: paddr=00034e34 vaddr=40800000 size=031e4h ( 12772) load
+I (70) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=9d3a4h (644004) map
+I (77) esp_image: segment 3: paddr=000d53cc vaddr=408031e4 size=0ce84h ( 52868) load
+I (90) esp_image: segment 4: paddr=000e2258 vaddr=40810070 size=01d88h (  7560) load
+I (94) esp_image: segment 5: paddr=000e3fe8 vaddr=50000000 size=0005ch (    92)
+I (101) esp_image: segment 6: paddr=000e404c vaddr=5000005c size=00008h (     8)
+I (110) boot: Fast booting app from partition at offset 0x10000
+I (116) boot: Disabling RNG early entropy source...
+I (134) cpu_start: Unicore app
+I (143) cpu_start: Pro cpu start user code
+I (143) cpu_start: cpu freq: 96000000 Hz
+I (143) app_init: Application information:
+I (145) app_init: Project name:     ot_sleepy_device
+I (151) app_init: App version:      152117d-dirty
+I (156) app_init: Compile time:     Sep  3 2024 15:00:23
+I (162) app_init: ELF file SHA256:  cecbd63dc...
+I (168) app_init: ESP-IDF:          f1c0e745a5
+I (173) efuse_init: Min chip rev:     v0.0
+I (178) efuse_init: Max chip rev:     v0.99
+I (183) efuse_init: Chip rev:         v0.1
+I (188) heap_init: Initializing. RAM available for dynamic allocation:
+I (195) heap_init: At 4081A1C0 len 000331C0 (204 KiB): RAM
+I (201) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM
+I (208) spi_flash: detected chip: generic
+I (212) spi_flash: flash io: dio
+W (215) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (236) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (244) main_task: Started on CPU0
+I (254) main_task: Calling app_main()
+I (274) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10
+I (284) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22
+I(294) OPENTHREAD:[I] ChildSupervsn-: Timeout: 0 -> 190
+I(304) OPENTHREAD:[I] Settings------: Read NetworkInfo {rloc:0x7c01, extaddr:4a4ce316e43cbdb5, role:child, mode:0x04, version:5, keyseq:0x0, ...
+I(314) OPENTHREAD:[I] Settings------: ... pid:0x9e25f8e, mlecntr:0x8c1013, maccntr:0x8c134c, mliid:87c341966d073a5f}
+I(314) OPENTHREAD:[I] Settings------: Read ParentInfo {extaddr:0ea7ebdda163f418, version:5}
+I (334) OPENTHREAD: OpenThread attached to netif
+I(334) OPENTHREAD:[N] Mle-----------: Role disabled -> detached
+I (304) main_task: Returned from app_main()
+I (364) OT_STATE: netif up
+I(524) OPENTHREAD:[N] Mle-----------: Role detached -> child
+W(524) OPENTHREAD:[W] Mle-----------: Failed to process Child Update Response as child: NotFound
+I(764) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(764) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(774) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(794) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(804) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 09 05 00 00 00 | .....c....N..... |
+I(814) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(814) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(834) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(844) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(854) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(864) OPENTHREAD:[N] Platform------: | 82 5E C9 EB DE 9E 63 07 | C1 6F EC 1D 58 C2 85 57 | .^....c..o..X..W |
+I(884) OPENTHREAD:[N] Platform------: | 20 7C B1 D7 8D AE C9 BD | 93 D9 4E 6A 58 80 48 70 |  |........NjX.Hp |
+I(884) OPENTHREAD:[N] Platform------: | AB F9 22 C8 76 15 08 4E | A2 DA 1A 3A 37 58 39 53 | ..".v..N...:7X9S |
+I(894) OPENTHREAD:[N] Platform------: | E1 6C B2 B8 29 1C B8 F2 | 9F 04 C5 72 66 F9 EC 1C | .l..)......rf... |
+I(904) OPENTHREAD:[N] Platform------: | C6 E7 43 4C 02 C7 B2 D6 | 12 5A 27 5A 8A DF F1 51 | ..CL.....Z'Z...Q |
+I(914) OPENTHREAD:[N] Platform------: | 89 BD 9B 0B 78 FF 98 1E | 92 D0 4F E4 50          | ....x.....O.P    |
+I(934) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(944) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(944) OPENTHREAD:[N] Platform------: | C0 A9 61 88 7F 33 F0 4D | 4C 4D 4C AD B9 00 15 C0 | ..a..3.MLML..... |
+I(964) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | D1 36 78 D2 20 B4 4F C1 | .........6x. .O. |
+I(974) OPENTHREAD:[N] Platform------: | A0 AD 69 92 6C B8 E7 2B | E3 56 D2 F1 96 34 B5 EF | ..i.l..+.V...4.. |
+I(984) OPENTHREAD:[N] Platform------: | 07 D7 EA C0 5F D7 84 CF | BF 91 05 44 51 D1 22 D2 | ...._......DQ.". |
+I(994) OPENTHREAD:[N] Platform------: | 8B B5 A0 11 8F 73 E9 35 | 35 66 96 1D A7 3F 93 D5 | .....s.55f...?.. |
+I(994) OPENTHREAD:[N] Platform------: | 74 EF 68 12 82 72 91 39 | 82 21 E6 3F 08          | t.h..r.9.!.?.    |
+I(1014) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1024) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1034) OPENTHREAD:[N] Platform------: | 07 65 45 42             |                         | .eEB             |
+I(1044) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1134) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1134) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1144) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1154) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1174) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 0A 05 00 00 00 | .....c....N..... |
+I(1184) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1184) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1194) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1214) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1224) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=046]===================
+I(1234) OPENTHREAD:[N] Platform------: | DF 1F 5B 17 92 62 E5 6A | 11 6F DB 0D 69 8B 24 23 | ..[..b.j.o..i.$# |
+I(1244) OPENTHREAD:[N] Platform------: | 0C E4 86 62 E5 52 B7 6E | 76 2A 50 82 FA 6F 0D E6 | ...b.R.nv*P..o.. |
+I(1254) OPENTHREAD:[N] Platform------: | 30 E8 2B 86 AD 0E 93 D7 | CD ED 10 53 0A 46       | 0.+........S.F   |
+I(1264) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1274) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=046]===================
+I(1284) OPENTHREAD:[N] Platform------: | E0 A9 61 88 10 46 11 42 | 08 CA 53 D0 07 81 98 AF | ..a..F.B..S..... |
+I(1304) OPENTHREAD:[N] Platform------: | 2A 1D D4 27 35 F4 2A 20 | DB 67 BD 8E 75 A7 E7 AE | *..'5.* .g..u... |
+I(1314) OPENTHREAD:[N] Platform------: | 1C 89 9D A5 52 2F 24 61 | D7 5C EF A0 11 EF       | ....R/$a.\....   |
+I(1314) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1324) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1344) OPENTHREAD:[N] Platform------: | 0F F9 30 43             |                         | ..0C             |
+I(1354) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1454) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1454) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1464) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1474) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1494) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 0B 05 00 00 00 | .....c....N..... |
+I(1504) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1504) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1514) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(1534) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1544) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(1554) OPENTHREAD:[N] Platform------: | CA 4D EC EA 52 DC 39 05 | C2 10 03 FD C6 D9 BA D4 | .M..R.9......... |
+I(1564) OPENTHREAD:[N] Platform------: | 93 EE 3B DD 34 F3 CF 1F | DE 9F 19 C6 4B 58 3D    | ..;.4.......KX=  |
+I(1574) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1584) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(1594) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(1604) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 79 | 19 62 43 7C B6 E1 26    | :_..3.3y.bC|..&  |
+I(1624) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1624) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1634) OPENTHREAD:[N] Platform------: | A1 E4 8A FF             |                         | ....             |
+I(1644) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x5 (SLEEP_WAKEUP),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1960
+load:0x4083cad0,len:0xf20
+load:0x4083efd0,len:0x2fa8
+entry 0x4083cada
+I (24) boot: ESP-IDF f1c0e745a5 2nd stage bootloader
+I (24) boot: compile time Sep  3 2024 14:27:44
+I (25) boot: chip revision: v0.1
+I (27) boot: efuse block revision: v0.2
+I (32) boot.esp32h2: SPI Speed      : 64MHz
+I (37) boot.esp32h2: SPI Mode       : DIO
+I (41) boot.esp32h2: SPI Flash Size : 2MB
+I (46) boot: Enabling RNG early entropy source...
+I (52) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=24e0ch (151052) map
+I (60) esp_image: segment 1: paddr=00034e34 vaddr=40800000 size=031e4h ( 12772) load
+I (70) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=9d3a4h (644004) map
+I (77) esp_image: segment 3: paddr=000d53cc vaddr=408031e4 size=0ce84h ( 52868) load
+I (90) esp_image: segment 4: paddr=000e2258 vaddr=40810070 size=01d88h (  7560) load
+I (94) esp_image: segment 5: paddr=000e3fe8 vaddr=50000000 size=0005ch (    92)
+I (101) esp_image: segment 6: paddr=000e404c vaddr=5000005c size=00008h (     8)
+I (110) boot: Fast booting app from partition at offset 0x10000
+I (116) boot: Disabling RNG early entropy source...
+I (134) cpu_start: Unicore app
+I (143) cpu_start: Pro cpu start user code
+I (143) cpu_start: cpu freq: 96000000 Hz
+I (143) app_init: Application information:
+I (145) app_init: Project name:     ot_sleepy_device
+I (151) app_init: App version:      152117d-dirty
+I (156) app_init: Compile time:     Sep  3 2024 15:00:23
+I (162) app_init: ELF file SHA256:  cecbd63dc...
+I (168) app_init: ESP-IDF:          f1c0e745a5
+I (173) efuse_init: Min chip rev:     v0.0
+I (178) efuse_init: Max chip rev:     v0.99
+I (183) efuse_init: Chip rev:         v0.1
+I (188) heap_init: Initializing. RAM available for dynamic allocation:
+I (195) heap_init: At 4081A1C0 len 000331C0 (204 KiB): RAM
+I (201) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM
+I (208) spi_flash: detected chip: generic
+I (212) spi_flash: flash io: dio
+W (215) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (236) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (244) main_task: Started on CPU0
+I (254) main_task: Calling app_main()
+I (274) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10
+I (284) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22
+I(294) OPENTHREAD:[I] ChildSupervsn-: Timeout: 0 -> 190
+I(304) OPENTHREAD:[I] Settings------: Read NetworkInfo {rloc:0x7c01, extaddr:4a4ce316e43cbdb5, role:child, mode:0x04, version:5, keyseq:0x0, ...
+I(314) OPENTHREAD:[I] Settings------: ... pid:0x9e25f8e, mlecntr:0x8c13fc, maccntr:0x8c1735, mliid:87c341966d073a5f}
+I(314) OPENTHREAD:[I] Settings------: Read ParentInfo {extaddr:0ea7ebdda163f418, version:5}
+I (334) OPENTHREAD: OpenThread attached to netif
+I(334) OPENTHREAD:[N] Mle-----------: Role disabled -> detached
+I (304) main_task: Returned from app_main()
+I (364) OT_STATE: netif up
+I(504) OPENTHREAD:[N] Mle-----------: Role detached -> child
+W(504) OPENTHREAD:[W] Mle-----------: Failed to process Child Update Response as child: NotFound
+I(604) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(604) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(614) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(624) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(644) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 0C 05 00 00 00 | .....c....N..... |
+I(654) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(654) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(664) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(674) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(694) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(704) OPENTHREAD:[N] Platform------: | F0 2D DD 5A 3A 2D 77 F7 | D0 0A 8B F1 42 0E 9F 6D | .-.Z:-w.....B..m |
+I(714) OPENTHREAD:[N] Platform------: | 15 34 13 33 77 9E 12 27 | 55 D5 FF F6 32 6F 52    | .4.3w..'U...2oR  |
+I(714) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(734) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(744) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(754) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 79 | 19 62 43 7C B6 E1 26    | :_..3.3y.bC|..&  |
+I(774) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(774) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(784) OPENTHREAD:[N] Platform------: | 29 3A A9 F3             |                         | ):..             |
+I(794) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(934) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(934) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(944) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(964) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(974) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 0D 05 00 00 00 | .....c....N..... |
+I(984) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(984) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(994) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1014) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1024) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(1034) OPENTHREAD:[N] Platform------: | 8A BF 8E A8 C9 12 1B 60 | AB 0D 90 E7 48 6F 66 8A | .......`....Hof. |
+I(1044) OPENTHREAD:[N] Platform------: | 76 F5 B7 B1 AD 50 EB F3 | 78 1F 20 C9 3A 97 C0 80 | v....P..x. .:... |
+I(1054) OPENTHREAD:[N] Platform------: | 86 E6 DE BF 1B 56 41 9E | DE 6A 4B EA C6 3D 1B 6B | .....VA..jK..=.k |
+I(1064) OPENTHREAD:[N] Platform------: | 05 99 E7 72 F2 22 39 D7 | 01 CB 95 CE 47 FD A6 A2 | ...r."9.....G... |
+I(1074) OPENTHREAD:[N] Platform------: | A8 B3 77 D4 77 38 3C 5C | 69 40 B5 27 6C 06 18 95 | ..w.w8<\i@.'l... |
+I(1084) OPENTHREAD:[N] Platform------: | DD 95 13 4A 7E 55 CE 29 | E9 4E 91 F4 D5          | ...J~U.).N...    |
+I(1104) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1114) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(1114) OPENTHREAD:[N] Platform------: | C0 A9 61 89 7F 33 F0 4D | 4C 4D 4C ED F1 00 15 C5 | ..a..3.MLML..... |
+I(1124) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | 97 35 44 2C 83 D4 FE D3 | .........5D,.... |
+I(1144) OPENTHREAD:[N] Platform------: | 39 FB 2B F3 4F ED 25 A1 | 81 BA 51 D6 97 3C 92 1E | 9.+.O.%...Q..<.. |
+I(1154) OPENTHREAD:[N] Platform------: | A9 C4 66 30 7F 48 CF 89 | 7B 5F 76 19 7A A0 19 23 | ..f0.H..{_v.z..# |
+I(1164) OPENTHREAD:[N] Platform------: | 12 87 5E E8 61 90 F1 75 | D0 F9 71 55 AB 70 D0 CE | ..^.a..u..qU.p.. |
+I(1174) OPENTHREAD:[N] Platform------: | A0 2E 27 7A A7 FF A1 80 | 4C 30 D3 8C 83          | ..'z....L0...    |
+I(1184) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1194) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1204) OPENTHREAD:[N] Platform------: | 95 D8 35 A5             |                         | ..5.             |
+I(1214) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1324) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1324) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1334) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1344) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1364) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 0E 05 00 00 00 | .....c....N..... |
+I(1374) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1374) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1384) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1404) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1414) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=046]===================
+I(1424) OPENTHREAD:[N] Platform------: | 79 A3 69 05 46 78 E9 37 | 12 AD B9 FF 86 9F 1A 75 | y.i.Fx.7.......u |
+I(1434) OPENTHREAD:[N] Platform------: | E8 12 80 02 5A 16 B1 C8 | BF E7 4C C2 B0 40 AD E1 | ....Z.....L..@.. |
+I(1444) OPENTHREAD:[N] Platform------: | 53 67 91 1E 3D B4 22 45 | 9E F0 07 04 EC 14       | Sg..=."E......   |
+I(1454) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1464) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=046]===================
+I(1474) OPENTHREAD:[N] Platform------: | E0 A9 61 89 10 F7 BC C6 | 56 5A 46 17 B0 00 E2 87 | ..a.....VZF..... |
+I(1494) OPENTHREAD:[N] Platform------: | 37 21 13 43 21 02 C1 A2 | 73 F0 90 C6 23 85 EA 79 | 7!.C!...s...#..y |
+I(1504) OPENTHREAD:[N] Platform------: | 98 6B 4B 25 76 C2 9A B0 | 0C 52 56 47 96 CA       | .kK%v....RVG..   |
+I(1504) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1514) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1534) OPENTHREAD:[N] Platform------: | B8 7C 69 6D             |                         | .|im             |
+I(1544) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1634) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1634) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1644) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1654) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1674) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 0F 05 00 00 00 | .....c....N..... |
+I(1684) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1684) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1694) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(1714) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1724) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(1734) OPENTHREAD:[N] Platform------: | 76 5C E7 FC 7A B2 9A C4 | BC 60 00 89 60 0F A9 54 | v\..z....`..`..T |
+I(1744) OPENTHREAD:[N] Platform------: | 1C 80 22 77 06 19 76 C7 | E5 7D 69 A3 73 85 20    | .."w..v..}i.s.   |
+I(1754) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1764) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(1774) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(1784) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 84 | EB 62 43 FF E5 52 25    | :_..3.3..bC..R%  |
+I(1804) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1814) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1814) OPENTHREAD:[N] Platform------: | E6 9D F1 CF             |                         | ....             |
+I(1824) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x5 (SLEEP_WAKEUP),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1960
+load:0x4083cad0,len:0xf20
+load:0x4083efd0,len:0x2fa8
+entry 0x4083cada
+I (24) boot: ESP-IDF f1c0e745a5 2nd stage bootloader
+I (24) boot: compile time Sep  3 2024 14:27:44
+I (25) boot: chip revision: v0.1
+I (27) boot: efuse block revision: v0.2
+I (32) boot.esp32h2: SPI Speed      : 64MHz
+I (37) boot.esp32h2: SPI Mode       : DIO
+I (41) boot.esp32h2: SPI Flash Size : 2MB
+I (46) boot: Enabling RNG early entropy source...
+I (52) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=24e0ch (151052) map
+I (60) esp_image: segment 1: paddr=00034e34 vaddr=40800000 size=031e4h ( 12772) load
+I (70) esp_image: segment 2: paddr=00038020 vaddr=42000020 size=9d3a4h (644004) map
+I (77) esp_image: segment 3: paddr=000d53cc vaddr=408031e4 size=0ce84h ( 52868) load
+I (90) esp_image: segment 4: paddr=000e2258 vaddr=40810070 size=01d88h (  7560) load
+I (94) esp_image: segment 5: paddr=000e3fe8 vaddr=50000000 size=0005ch (    92)
+I (101) esp_image: segment 6: paddr=000e404c vaddr=5000005c size=00008h (     8)
+I (110) boot: Fast booting app from partition at offset 0x10000
+I (116) boot: Disabling RNG early entropy source...
+I (134) cpu_start: Unicore app
+I (143) cpu_start: Pro cpu start user code
+I (143) cpu_start: cpu freq: 96000000 Hz
+I (143) app_init: Application information:
+I (145) app_init: Project name:     ot_sleepy_device
+I (151) app_init: App version:      152117d-dirty
+I (156) app_init: Compile time:     Sep  3 2024 15:00:23
+I (162) app_init: ELF file SHA256:  cecbd63dc...
+I (168) app_init: ESP-IDF:          f1c0e745a5
+I (173) efuse_init: Min chip rev:     v0.0
+I (178) efuse_init: Max chip rev:     v0.99
+I (183) efuse_init: Chip rev:         v0.1
+I (188) heap_init: Initializing. RAM available for dynamic allocation:
+I (195) heap_init: At 4081A1C0 len 000331C0 (204 KiB): RAM
+I (201) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM
+I (208) spi_flash: detected chip: generic
+I (212) spi_flash: flash io: dio
+W (215) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (229) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (236) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (244) main_task: Started on CPU0
+I (254) main_task: Calling app_main()
+I (274) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10
+I (274) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22
+I(284) OPENTHREAD:[I] ChildSupervsn-: Timeout: 0 -> 190
+I(294) OPENTHREAD:[I] Settings------: Read NetworkInfo {rloc:0x7c01, extaddr:4a4ce316e43cbdb5, role:child, mode:0x04, version:5, keyseq:0x0, ...
+I(314) OPENTHREAD:[I] Settings------: ... pid:0x9e25f8e, mlecntr:0x8c17e5, maccntr:0x8c1b1f, mliid:87c341966d073a5f}
+I(314) OPENTHREAD:[I] Settings------: Read ParentInfo {extaddr:0ea7ebdda163f418, version:5}
+I (324) OPENTHREAD: OpenThread attached to netif
+I(334) OPENTHREAD:[N] Mle-----------: Role disabled -> detached
+I (304) main_task: Returned from app_main()
+I (364) OT_STATE: netif up
+I(514) OPENTHREAD:[N] Mle-----------: Role detached -> child
+W(514) OPENTHREAD:[W] Mle-----------: Failed to process Child Update Response as child: NotFound
+I(664) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(664) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(684) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(694) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(704) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 10 05 00 00 00 | .....c....N..... |
+I(714) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(724) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(734) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(744) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(754) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=093]===================
+I(774) OPENTHREAD:[N] Platform------: | 0B 18 07 9F 51 DA 8C 40 | AE 78 69 DA 72 89 67 BC | ....Q..@.xi.r.g. |
+I(784) OPENTHREAD:[N] Platform------: | BC 1C 14 B1 FD 64 F1 69 | 1A 61 0D E0 D2 C2 6B C8 | .....d.i.a....k. |
+I(784) OPENTHREAD:[N] Platform------: | 4D 1D C4 32 8E 67 57 D9 | 27 DD 7E B0 97 9B 5D A2 | M..2.gW.'.~...]. |
+I(794) OPENTHREAD:[N] Platform------: | 22 E0 0A D8 5A 2D 5B F1 | 74 95 AD 1F 41 76 2C A9 | "...Z-[.t...Av,. |
+I(814) OPENTHREAD:[N] Platform------: | 5E EE 90 5F 4E A7 B2 14 | 34 12 40 C6 26 3A 3D 03 | ^.._N...4.@.&:=. |
+I(824) OPENTHREAD:[N] Platform------: | AC 40 AD CF D6 E0 D3 5C | FF 66 C9 EF 03          | .@.....\.f...    |
+I(834) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(844) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=093]===================
+I(854) OPENTHREAD:[N] Platform------: | C0 A9 61 8A 7F 33 F0 4D | 4C 4D 4C D3 39 00 15 C9 | ..a..3.MLML.9... |
+I(864) OPENTHREAD:[N] Platform------: | 87 16 00 00 00 00 00 01 | B8 F7 85 4C 02 35 16 AF | ...........L.5.. |
+I(874) OPENTHREAD:[N] Platform------: | E1 57 64 C3 07 B5 49 DE | C8 75 75 61 23 5C DF 80 | .Wd...I..uua#\.. |
+I(884) OPENTHREAD:[N] Platform------: | 3F AE A5 E1 D9 29 AF BE | EE 9D A4 21 EA 7E 74 21 | ?....).....!.~t! |
+I(904) OPENTHREAD:[N] Platform------: | 77 43 9D 82 4A BD 84 78 | 82 D0 DC 8F 0D 62 26 44 | wC..J..x.....b&D |
+I(904) OPENTHREAD:[N] Platform------: | 0A ED E0 A5 C0 2D 74 06 | 1D 91 24 EC 31          | .....-t...$.1    |
+I(914) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(924) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(934) OPENTHREAD:[N] Platform------: | DD 2C 0E 3A             |                         | .,.:             |
+I(954) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1054) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1054) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1064) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1084) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1094) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 11 05 00 00 00 | .....c....N..... |
+I(1104) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1104) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1124) OPENTHREAD:[N] Platform------: | 4A 4C E3 16 E4 3C BD B5 | 0E A7 EB DD A1 63 F4 18 | JL...<.......c.. |
+I(1134) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1144) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=046]===================
+I(1154) OPENTHREAD:[N] Platform------: | 82 3B D2 75 06 C9 03 98 | 31 5C 59 AA 85 D5 B8 63 | .;.u....1\Y....c |
+I(1174) OPENTHREAD:[N] Platform------: | 6F 4F F3 0A 95 63 18 B5 | 7E A3 8A A7 B1 E2 64 0E | oO...c..~.....d. |
+I(1174) OPENTHREAD:[N] Platform------: | 4D F9 E0 86 02 EF F2 C7 | 21 0C E9 5C 79 D2       | M.......!..\y.   |
+I(1184) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1194) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=046]===================
+I(1214) OPENTHREAD:[N] Platform------: | E0 A9 61 8A 10 FF A0 84 | 36 5C E5 CA C9 3C 0E C9 | ..a.....6\...<.. |
+I(1224) OPENTHREAD:[N] Platform------: | B7 A5 FC 8F C0 2E F7 B0 | 06 68 55 06 C0 82 76 F9 | .........hU...v. |
+I(1234) OPENTHREAD:[N] Platform------: | B6 5B 22 84 A6 10 C1 AD | BF 0C 00 57 F5 FA       | .["........W..   |
+I(1234) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1254) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1264) OPENTHREAD:[N] Platform------: | 2C 43 81 EA             |                         | ,C..             |
+I(1274) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1374) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=016]===================
+I(1374) OPENTHREAD:[N] Platform------: | 30 B9 7A 04 A0 2B 0E A0 | 80 DF 63 FC 97 A5 7D 7F | 0.z..+....c...}. |
+I(1384) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1404) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=016]==========================
+I(1414) OPENTHREAD:[N] Platform------: | 0E A7 EB DD A1 63 F4 18 | 00 17 4E 12 05 00 00 00 | .....c....N..... |
+I(1424) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1424) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(1444) OPENTHREAD:[N] Platform------: | 01 7C 00 7C 00 00 00 00 | 00 00 00 00 00 00 00 00 | .|.|............ |
+I(1454) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1464) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=031]===================
+I(1474) OPENTHREAD:[N] Platform------: | 0D A5 CC E1 D4 F9 D5 63 | 91 80 C1 B2 05 FB 23 94 | .......c......#. |
+I(1494) OPENTHREAD:[N] Platform------: | B0 A2 05 DB 2A 58 83 FF | 29 59 F7 A1 68 04 14    | ....*X..)Y..h..  |
+I(1494) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1504) OPENTHREAD:[N] Platform------: ===================[Plaintext Bytes (no tag) len=031]===================
+I(1514) OPENTHREAD:[N] Platform------: | 7E 55 85 55 6D 23 9A 77 | 88 9C 87 C3 41 96 6D 07 | ~U.Um#.w....A.m. |
+I(1534) OPENTHREAD:[N] Platform------: | 3A 5F F0 16 33 16 33 AD | 84 62 43 C0 9C 68 D5    | :_..3.3..bC..h.  |
+I(1544) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(1554) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=004]======================
+I(1554) OPENTHREAD:[N] Platform------: | FC D2 5E 6E             |                         | ..^n             |
+I(1574) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+
+Done
+ energy-usage-sed-simple  main = !2                                                                               🚀  4m 42s  03:04:34 PM
