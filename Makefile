@@ -62,3 +62,6 @@ check:
 	leaks --atExit -- ./decrypt-mac-ascon128a
 	leaks --atExit -- ./decrypt-mle-ascon128a
 	leaks --atExit -- ./decrypt-mle-ascon128
+
+parse-test:
+	python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1825 --end 1844
