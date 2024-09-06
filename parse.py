@@ -27,8 +27,10 @@ if __name__ == "__main__":
   nonceDump = hexDump[4]
   assocDataDump = hexDump[7]
   tagDump = hexDump[len(hexDump) - 2]
+  ciphertext = hexDump[10:len(hexDump) - 4]
 
   print(keyDump)
   print(nonceDump)
   print(assocDataDump)
   print(tagDump)
+  print(ciphertext)
