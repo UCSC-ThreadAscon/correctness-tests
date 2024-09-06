@@ -38,10 +38,14 @@ if __name__ == "__main__":
   nonce = parse(hexDump[4])
   assocData = parse(hexDump[7])
   tag = parse(hexDump[len(hexDump) - 2])
-  # ciphertextDump = hexDump[10:len(hexDump) - 4]
+
+  ciphertextDump = hexDump[10:len(hexDump) - 4]
+  ciphertext = []
+  for line in ciphertextDump:
+    ciphertext += parse(line)
 
   print(key)
   print(nonce)
   print(assocData)
   print(tag)
-  # print(ciphertextDump)
+  print(ciphertext)
