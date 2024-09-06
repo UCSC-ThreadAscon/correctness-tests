@@ -23,14 +23,14 @@ if __name__ == "__main__":
     line = linecache.getline(path, lineNum)
     hexDump.append(line)
 
-  keyDump = hexDump[1]
-  nonceDump = hexDump[4]
-  assocDataDump = hexDump[7]
-  tagDump = hexDump[len(hexDump) - 2]
-  ciphertext = hexDump[10:len(hexDump) - 4]
+  key = hexDump[1]
+  nonce = hexDump[4]
+  assocData = hexDump[7]
+  tag = hexDump[len(hexDump) - 2]
+  ciphertextDump = hexDump[10:len(hexDump) - 4]
 
-  print(keyDump)
-  print(nonceDump)
-  print(assocDataDump)
-  print(tagDump)
-  print(ciphertext)
+  print(key)
+  print(nonce)
+  print(assocData)
+  print(tag)
+  print(ciphertextDump)
