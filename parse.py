@@ -47,5 +47,5 @@ if __name__ == "__main__":
   print(key)
   print(nonce)
   print(assocData)
-  print(tag)
   print(ciphertext)
+  print(tag)
