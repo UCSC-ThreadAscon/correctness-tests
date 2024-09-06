@@ -12,6 +12,17 @@ def parse(hexDumpString):
 
   return hexDump
 
+def cArrayCreate(varname, bytes):
+  print(f"uint8_t {varname}[] = " + "{", end="")
+
+  for i in range(0, len(bytes)):
+    if i == len(bytes) - 1:
+      print(bytes[i] + "}")
+    else:
+      print(bytes[i], end=", ")
+
+  return
+
 parser = argparse.ArgumentParser()
 
 helperText = "The file path containing the OpenThread ASCON hex dump."
@@ -44,8 +55,8 @@ if __name__ == "__main__":
   for line in ciphertextDump:
     ciphertext += parse(line)
 
-  print(key)
-  print(nonce)
-  print(assocData)
-  print(ciphertext)
-  print(tag)
+  cArrayCreate("key", key)
+  cArrayCreate("nonce", nonce)
+  cArrayCreate("assocData", assocData)
+  cArrayCreate("payload", ciphertext)
+  cArrayCreate("tag", tag)
