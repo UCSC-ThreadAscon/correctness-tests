@@ -23,5 +23,12 @@ if __name__ == "__main__":
     line = linecache.getline(path, lineNum)
     hexDump.append(line)
 
-  for line in hexDump:
-    print(line)
+  keyDump = hexDump[1]
+  nonceDump = hexDump[4]
+  assocDataDump = hexDump[7]
+  tagDump = hexDump[len(hexDump) - 2]
+
+  print(keyDump)
+  print(nonceDump)
+  print(assocDataDump)
+  print(tagDump)
