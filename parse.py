@@ -1,5 +1,16 @@
 import argparse
 import linecache
+import re
+
+def parse(hexDumpString):
+  hexRegex = re.compile("[A-F,0-9][A-F,0-9]")
+  hexDump = []
+
+  for substring in hexDumpString.split(" "):
+    if hexRegex.match(substring) != None:
+      hexDump.append(substring)
+
+  return hexDump
 
 parser = argparse.ArgumentParser()
 
@@ -23,14 +34,14 @@ if __name__ == "__main__":
     line = linecache.getline(path, lineNum)
     hexDump.append(line)
 
-  key = hexDump[1]
-  nonce = hexDump[4]
-  assocData = hexDump[7]
-  tag = hexDump[len(hexDump) - 2]
-  ciphertextDump = hexDump[10:len(hexDump) - 4]
+  key = parse(hexDump[1])
+  nonce = parse(hexDump[4])
+  assocData = parse(hexDump[7])
+  tag = parse(hexDump[len(hexDump) - 2])
+  # ciphertextDump = hexDump[10:len(hexDump) - 4]
 
   print(key)
   print(nonce)
   print(assocData)
   print(tag)
-  print(ciphertextDump)
+  # print(ciphertextDump)
