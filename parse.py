@@ -2,11 +2,11 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument(
-  "--start",
-  help="The starting line number of the ASCON bytes hex dump",
-  action="store"
-)
+helperText = "The starting line number of the ASCON bytes hex dump."
+parser.add_argument("--start", help=helperText, required=True)
+
+helperText = "The ending line number of the ASCON bytes hex dump."
+parser.add_argument("--end", help=helperText, required=True)
 
 args = parser.parse_args()
 
