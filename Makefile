@@ -73,3 +73,12 @@ parse-ascon128a:
 	# MLE Commisioning Packets
 	python3 ./parse.py --path testdata/mle-commissioning/ascon128a/border-router.txt --start 826 --end 855
 	python3 ./parse.py --path testdata/mle-commissioning/ascon128a/border-router.txt --start 873 --end 895
+
+	# Time Sync
+	python3 ./parse.py --path testdata/time-sync/ascon128a/delay-server.txt --start 964 --end 978
+
+	# SED Encrypt
+	python3 ./parse.py --path testdata/sed-encrypt-mac/ascon128a/sed.txt --start 578 --end 595
+
+	# SED Decrypt
+	python3 ./parse.py --path testdata/sed-decrypt-mac/ascon128a/border-router.txt --start 1543 --end 1558
