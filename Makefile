@@ -82,3 +82,23 @@ parse-ascon128a:
 
 	# SED Decrypt
 	python3 ./parse.py --path testdata/sed-decrypt-mac/ascon128a/border-router.txt --start 1543 --end 1558
+
+parse-ascon128:
+	# Commissioning MAC
+	python3 ./parse.py --path testdata/commissioning/ascon128/border-router.txt --start 1692 --end 1711
+	python3 ./parse.py --path testdata/commissioning/ascon128/border-router.txt --start 1712 --end 1728
+	python3 ./parse.py --path testdata/commissioning/ascon128/border-router.txt --start 1750 --end 1769
+	python3 ./parse.py --path testdata/commissioning/ascon128/border-router.txt --start 1823 --end 1842
+
+	# MLE Commissioning Packets
+	python3 ./parse.py --path testdata/mle-commissioning/ascon128/border-router.txt --start 6695 --end 6724
+	python3 ./parse.py --path testdata/mle-commissioning/ascon128/border-router.txt --start 6775 --end 6797
+
+	# Time Sync (MLE)
+	python3 ./parse.py --path testdata/time-sync/ascon128/delay-server.txt --start 1077 --end 1092
+
+	# SED Encrypt
+	python3 ./parse.py --path testdata/sed-encrypt-mac/ascon128/sed.txt --start 771 --end 788
+
+	# SED Decrypt
+	python3 ./parse.py --path testdata/sed-decrypt-mac/ascon128/border-router.txt --start 1815 --end 1834
