@@ -17,9 +17,9 @@ def cArrayCreate(varname, bytes):
 
   for i in range(0, len(bytes)):
     if i == len(bytes) - 1:
-      print(bytes[i] + "}")
+      print("0x" + bytes[i] + "};")
     else:
-      print(bytes[i], end=", ")
+      print("0x" + bytes[i], end=", ")
 
   return
 
