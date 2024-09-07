@@ -95,7 +95,7 @@ parse-ascon128:
 	python3 ./parse.py --path testdata/mle-commissioning/ascon128/border-router.txt --start 6775 --end 6797
 
 	# Time Sync (MLE)
-	python3 ./parse.py --path testdata/time-sync/ascon128/delay-server.txt --start 1077 --end 1092
+	python3 ./parse.py --path testdata/time-sync/ascon128/delay-server.txt --start 1062 --end 1076
 
 	# SED Encrypt
 	python3 ./parse.py --path testdata/sed-encrypt-mac/ascon128/sed.txt --start 771 --end 788
