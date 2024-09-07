@@ -65,11 +65,11 @@ check:
 
 parse-ascon128a:
 	# Commissioning MAC
-	python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1803 --end 1821
-	python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1825 --end 1844
-	python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1845 --end 1861
-	python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1923 --end 1937
+	# python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1803 --end 1821
+	# python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1825 --end 1844
+	# python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1845 --end 1861
+	# python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1923 --end 1937
 
-	# MLE Commisioning Packets
-	python3 ./parse.py --path testdata/mle-commissioning/ascon128a/border-router.txt --start 826 --end 855
+	# # MLE Commisioning Packets
+	# python3 ./parse.py --path testdata/mle-commissioning/ascon128a/border-router.txt --start 826 --end 855
 	python3 ./parse.py --path testdata/mle-commissioning/ascon128a/border-router.txt --start 873 --end 895

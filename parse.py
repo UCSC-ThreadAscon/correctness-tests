@@ -7,7 +7,7 @@ def parse(hexDumpString):
   hexDump = []
 
   for substring in hexDumpString.split(" "):
-    if hexRegex.match(substring) != None:
+    if hexRegex.fullmatch(substring) != None:
       hexDump.append(substring)
 
   return hexDump
