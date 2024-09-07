@@ -63,5 +63,7 @@ check:
 	leaks --atExit -- ./decrypt-mle-ascon128a
 	leaks --atExit -- ./decrypt-mle-ascon128
 
-parse:
+parse-ascon128a:
+	# Commissioning MAC
 	python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1825 --end 1844
+	python3 ./parse.py --path testdata/commissioning/ascon128a/border-router.txt --start 1845 --end 1861
