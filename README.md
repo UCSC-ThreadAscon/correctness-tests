@@ -1,4 +1,4 @@
-# UCSC Thread-Ascon Correctness Tests
+# Thread-Ascon Correctness Tests
 
 This repository contains tests which proves that my forks of
 [ESP-IDF](https://github.com/UCSC-ThreadAscon/esp-idf) and
