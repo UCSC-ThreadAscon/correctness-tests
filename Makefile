@@ -2,24 +2,41 @@ CC = clang
 CFLAGS = -Wall -Werror -Wextra -Wpedantic
 HEADERS = ./libascon/ascon.h 							\
 					./libascon/ascon_internal.h
+
+AEAD_HEADERS = ./ascon_aead128_ref/api.h  \
+				./ascon_aead128_ref/ascon.h  \
+				./ascon_aead128_ref/constants.h    \
+				./crypto_aead.h    \
+				./ascon_aead128_ref/permutations.h \
+				./ascon_aead128_ref/printstate.h  \
+				./ascon_aead128_ref/round.h  \
+				./ascon_aead128_ref/word.h  \
+
 OBJECTS = ./libascon/ascon_permutations.o \
-					./libascon/ascon_hash.o 				\
+					./libascon/ascon_hash.o 			\
 					./libascon/ascon_buffering.o 		\
 					./libascon/ascon_aead128a.o 		\
 					./libascon/ascon_aead128.o 			\
 					./libascon/ascon_aead80pq.o 		\
-					./libascon/ascon_aead_common.o
-BINARIES = example test-encrypt decrypt-mac-ascon128
+					./libascon/ascon_aead_common.o       
 
-.PHONY: libascon
+AEAD_OBJECTS = ./ascon_aead128_ref/aead.o \
+				./ascon_aead128_ref/printstate.o \
 
-all: example decrypt-mac-ascon128 decrypt-mac-ascon128a decrypt-mle-ascon128a decrypt-mle-ascon128
+BINARIES = example test-encrypt decrypt-mac-ascon128   decrypt-mac-asconaead128 
+
+.PHONY: libascon ascon_aead128_ref
+
+all: example decrypt-mac-ascon128 decrypt-mac-ascon128a decrypt-mle-ascon128a decrypt-mle-ascon128   decrypt-mac-asconaead128 decrypt-mle-asconaead128
 
 test:
+	./decrypt-mac-asconaead128
 	./decrypt-mac-ascon128
 	./decrypt-mac-ascon128a
+	./decrypt-mle-asconaead128
 	./decrypt-mle-ascon128a
 	./decrypt-mle-ascon128
+	
 
 decrypt-mle-ascon128: decrypt-mle-ascon128.o
 	$(CC) $(OBJECTS) decrypt-mle-ascon128.o -o decrypt-mle-ascon128 -g
@@ -32,6 +49,7 @@ decrypt-mle-ascon128a: decrypt-mle-ascon128a.o
 
 decrypt-mle-ascon128a.o: $(HEADERS) $(OBJECTS) decrypt-mle-ascon128a.c
 	$(CC) $(CFLAGS) -c decrypt-mle-ascon128a.c -g
+
 decrypt-mac-ascon128a: decrypt-mac-ascon128a.o
 	$(CC) $(OBJECTS) decrypt-mac-ascon128a.o -o decrypt-mac-ascon128a -g
 
@@ -50,18 +68,38 @@ example: $(HEADERS) $(OBJECTS) example.o
 example.o: $(HEADERS) $(OBJECTS) example.c
 	$(CC) $(CFLAGS) -c example.c -g
 
+
+decrypt-mac-asconaead128: decrypt-mac-asconaead128.o
+	$(CC) $(AEAD_OBJECTS) decrypt-mac-asconaead128.o -o decrypt-mac-asconaead128 -g
+
+decrypt-mac-asconaead128.o: $(AEAD_HEADERS) $(AEAD_OBJECTS) decrypt-mac-asconaead128.c
+	$(CC) $(CFLAGS) -c decrypt-mac-asconaead128.c -g
+
+decrypt-mle-asconaead128: decrypt-mle-asconaead128.o
+	$(CC) $(AEAD_OBJECTS) decrypt-mle-asconaead128.o -o decrypt-mle-asconaead128 -g
+
+decrypt-mle-asconaead128.o: $(AEAD_HEADERS) $(AEAD_OBJECTS) decrypt-mle-asconaead128.c
+	$(CC) $(CFLAGS) -c decrypt-mle-asconaead128.c -g
+
 libascon:
 	$(MAKE) -C libascon
 
+ascon_aead128_ref:
+	$(MAKE) -C ascon_aead128_ref
+
 clean:
-	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128
+	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128   decrypt-mac-asconaead128 decrypt-mle-asconaead128
 	cd libascon && $(MAKE) clean
+	cd ascon_aead128_ref && $(MAKE) clean
 
 check:
+	leaks --atExit -- ./decrypt-mac-asconaead128
 	leaks --atExit -- ./decrypt-mac-ascon128
 	leaks --atExit -- ./decrypt-mac-ascon128a
+	leaks --atExit -- ./decrypt-mac-asconaead128
 	leaks --atExit -- ./decrypt-mle-ascon128a
 	leaks --atExit -- ./decrypt-mle-ascon128
+
 
 parse-ascon128a:
 	# Commissioning MAC
