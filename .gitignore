@@ -16,5 +16,3 @@ decrypt-mle-ascon128
 decrypt-mle-ascon128a
 encrypt-mle-ascon128
 encrypt-mle-ascon128a
-
-libsodium
