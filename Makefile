@@ -1,26 +1,17 @@
 CC = clang 
 CFLAGS = -Wall -Werror -Wextra -Wpedantic
 HEADERS = ./libascon/ascon.h 							\
-					./libascon/ascon_internal.h \
-					./asconaead128/esp32/encrypt_decrypt.h \
-					./asconaead128/esp32/api.h \
-					./asconaead128/esp32/core.h \
-					./asconaead128/esp32/constants.h \
-					./asconaead128/esp32/lendian.h \
-					./asconaead128/esp32/permutations.h 
+					./libascon/ascon_internal.h
+
 OBJECTS = ./libascon/ascon_permutations.o \
 					./libascon/ascon_hash.o 				\
 					./libascon/ascon_buffering.o 		\
 					./libascon/ascon_aead128a.o 		\
 					./libascon/ascon_aead128.o 			\
 					./libascon/ascon_aead80pq.o 		\
-					./libascon/ascon_aead_common.o \
-					./asconaead128/esp32/encrypt.o \
-					./asconaead128/esp32/decrypt.o \
-					./asconaead128/esp32/core.o \
-					./asconaead128/esp32/permutations.o 
+					./libascon/ascon_aead_common.o
 
-BINARIES = example test-encrypt decrypt-mac-ascon128 testaead
+BINARIES = example test-encrypt decrypt-mac-ascon128 chachacorrectness
 
 .PHONY: libascon asonaead128
 
@@ -61,17 +52,17 @@ example: $(HEADERS) $(OBJECTS) example.o
 example.o: $(HEADERS) $(OBJECTS) example.c
 	$(CC) $(CFLAGS) -c example.c -g
 
-testaead: $(HEADERS) $(OBJECTS) testaead.o 
-	$(CC) $(OBJECTS) test_aead.o -o testaead -g
+chachacorrectness: $(HEADERS) $(OBJECTS) chachacorrectness.o 
+	$(CC) $(OBJECTS) chachacorrectness.o -o chachacorrectness -g -lsodium
 
-testaead.o: $(HEADERS) $(OBJECTS) test_aead.c 
-	$(CC) $(CFLAGS) -c test_aead.c -g
+chachacorrectness.o: $(HEADERS) $(OBJECTS) chachacorrectness.c 
+	$(CC) $(CFLAGS) -c chachacorrectness.c -g -lsodium
 
 libascon:
 	$(MAKE) -C libascon
 
 clean:
-	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128 testaead
+	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128 chachacorrectness
 	cd libascon && $(MAKE) clean
 
 check:
