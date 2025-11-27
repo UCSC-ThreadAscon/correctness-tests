@@ -52,11 +52,14 @@ example: $(HEADERS) $(OBJECTS) example.o
 example.o: $(HEADERS) $(OBJECTS) example.c
 	$(CC) $(CFLAGS) -c example.c -g
 
+chachapoly: chachacorrectness
+	./chachacorrectness
+
 chachacorrectness: $(HEADERS) $(OBJECTS) chachacorrectness.o 
 	$(CC) $(OBJECTS) chachacorrectness.o -o chachacorrectness -g -lsodium
 
 chachacorrectness.o: $(HEADERS) $(OBJECTS) chachacorrectness.c 
-	$(CC) $(CFLAGS) -c chachacorrectness.c -g -lsodium
+	$(CC) $(CFLAGS) -c chachacorrectness.c -g
 
 libascon:
 	$(MAKE) -C libascon
