@@ -1,0 +1,19 @@
+I(916292) OPENTHREAD:[N] Platform------: ===================[Thread Network Key Bytes len=032]===================
+I(916292) OPENTHREAD:[N] Platform------: | 8D 61 DB 43 42 4A A3 47 | E7 99 C2 47 90 14 6A 20 | .a.CBJ.G...G..j  |
+I(916292) OPENTHREAD:[N] Platform------: | 8D 61 DB 43 42 4A A3 47 | E7 99 C2 47 90 14 6A 20 | .a.CBJ.G...G..j  |
+I(916302) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(916302) OPENTHREAD:[N] Platform------: =========================[Nonce Bytes len=012]==========================
+I(916302) OPENTHREAD:[N] Platform------: | 7E EE F2 01 A1 67 79 A4 | 00 07 FB F3             | ~....gy.....     |
+I(916302) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(916312) OPENTHREAD:[N] Platform------: ====================[Associated Data Bytes len=016]=====================
+I(916312) OPENTHREAD:[N] Platform------: | FF FF 00 6C 00 00 00 00 | 00 00 00 00 00 00 00 00 | ...l............ |
+I(916312) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(916312) OPENTHREAD:[N] Platform------: ==================[Ciphertext Bytes (no tag) len=050]===================
+I(916322) OPENTHREAD:[N] Platform------: | 45 13 A6 D7 17 55 B7 41 | 0A 38 68 A3 F3 20 5C CD | E....U.A.8h.. \. |
+I(916322) OPENTHREAD:[N] Platform------: | 5E FB 52 D5 1A 06 98 7B | BE 25 9C E7 D9 CE 2A 47 | ^.R....{.%....*G |
+I(916322) OPENTHREAD:[N] Platform------: | 3C CA B7 B9 4A C6 2F AC | 5B 9D 46 94 A7 E4 44 F0 | <...J./.[.F...D. |
+I(916322) OPENTHREAD:[N] Platform------: | 7B 12                   |                         | {.               |
+I(916332) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
+I(916332) OPENTHREAD:[N] Platform------: ======================[Tag (Footer) Bytes len=016]======================
+I(916332) OPENTHREAD:[N] Platform------: | FF E2 B8 3C DB 93 F2 5A | E6 1E CC BA 4D 03 87 E4 | ...<...Z....M... |
+I(916332) OPENTHREAD:[N] Platform------: ------------------------------------------------------------------------
