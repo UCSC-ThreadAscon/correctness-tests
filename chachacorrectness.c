@@ -161,7 +161,7 @@ int main(void)
         {
             printf("%02X ", plaintext[i]);
         }
-        printf("\n");
+        printf("\n\n");
     }
 
     else
