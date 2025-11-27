@@ -3,8 +3,6 @@ CFLAGS = -Wall -Werror -Wextra -Wpedantic
 HEADERS = ./libascon/ascon.h 							\
 					./libascon/ascon_internal.h
 
-<<<<<<< HEAD
-=======
 AEAD_HEADERS = ./ascon_aead128_ref/api.h  \
 				./ascon_aead128_ref/ascon.h  \
 				./ascon_aead128_ref/constants.h    \
@@ -14,29 +12,17 @@ AEAD_HEADERS = ./ascon_aead128_ref/api.h  \
 				./ascon_aead128_ref/round.h  \
 				./ascon_aead128_ref/word.h  \
 
->>>>>>> asconaead128_correctness
 OBJECTS = ./libascon/ascon_permutations.o \
 					./libascon/ascon_hash.o 			\
 					./libascon/ascon_buffering.o 		\
 					./libascon/ascon_aead128a.o 		\
 					./libascon/ascon_aead128.o 			\
 					./libascon/ascon_aead80pq.o 		\
-<<<<<<< HEAD
 					./libascon/ascon_aead_common.o
 
 BINARIES = example test-encrypt decrypt-mac-ascon128 chachacorrectness
 
-.PHONY: libascon asonaead128
-=======
-					./libascon/ascon_aead_common.o       
-
-AEAD_OBJECTS = ./ascon_aead128_ref/aead.o \
-				./ascon_aead128_ref/printstate.o \
->>>>>>> asconaead128_correctness
-
-BINARIES = example test-encrypt decrypt-mac-ascon128   decrypt-mac-asconaead128 
-
-.PHONY: libascon ascon_aead128_ref
+.PHONY: libascon asonaead128 ascon_aead128_ref
 
 all: example decrypt-mac-ascon128 decrypt-mac-ascon128a decrypt-mle-ascon128a decrypt-mle-ascon128   decrypt-mac-asconaead128 decrypt-mle-asconaead128
 
@@ -107,11 +93,7 @@ ascon_aead128_ref:
 	$(MAKE) -C ascon_aead128_ref
 
 clean:
-<<<<<<< HEAD
-	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128 chachacorrectness
-=======
-	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128   decrypt-mac-asconaead128 decrypt-mle-asconaead128
->>>>>>> asconaead128_correctness
+	rm -r -f $(wildcard *.o) $(BINARIES) test-decrypt decrypt-mac-ascon128a decrypt-mac-ascon128 decrypt-mle-ascon128a decrypt-mle-ascon128  chachacorrectness decrypt-mac-asconaead128 decrypt-mle-asconaead128
 	cd libascon && $(MAKE) clean
 	cd ascon_aead128_ref && $(MAKE) clean
 
