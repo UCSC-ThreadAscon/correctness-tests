@@ -1,0 +1,1 @@
+All the code in this directory is from the `AsconAead128` source code from the [ASCON-C GitHub repository](https://github.com/ascon/ascon-c/tree/main/crypto_aead/asconaead128/esp32).
